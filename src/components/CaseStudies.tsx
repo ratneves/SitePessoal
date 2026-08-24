@@ -112,7 +112,7 @@ function CaseStudyCard({
 export function CaseStudies() {
   const { t } = useLanguage();
   return (
-    <Section id="case-studies" title={t.caseStudies.title} intro={t.caseStudies.intro}>
+    <Section id="projects" title={t.caseStudies.title} intro={t.caseStudies.intro}>
       <div className="grid gap-8 lg:grid-cols-2 items-start">
         {t.caseStudies.items.map((item) => (
           <CaseStudyCard

@@ -6,7 +6,7 @@ import { Section } from "./Section";
 export function Projects() {
   const { t } = useLanguage();
   return (
-    <Section id="projects" title={t.projects.title} tone="dark">
+    <Section id="other-projects" title={t.projects.title} tone="dark">
       <div className="grid gap-6 sm:grid-cols-2">
         {t.projects.items.map((project) => (
           <div
