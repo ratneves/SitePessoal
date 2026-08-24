@@ -183,14 +183,14 @@ export const content: Record<Locale, Content> = {
     stats: [
       { value: "38", label: "anos de carreira" },
       { value: "40", label: "anos como formador" },
-      { value: "4", label: "departamentos liderados" },
+      { value: "5", label: "departamentos liderados" },
       { value: "5", label: "países com projetos entregues" },
     ],
     about: {
       title: "Sobre mim",
       paragraphs: [
         "Sou um executivo de tecnologia com uma carreira de 38 anos, construída sobre dois pilares que se reforçam mutuamente: a liderança de departamentos e a docência. Comecei a dar formação em 1986, ainda antes de iniciar funções como analista programador, e desde então nunca deixei de combinar a responsabilidade de gerir equipas e sistemas com a de formar e desenvolver pessoas — primeiro como responsável de setor, depois como diretor de departamento em várias organizações, e desde 2023 também como docente universitário.",
-        "Ao longo do percurso, dirigi departamentos de informática e tecnologia em setores como saúde, têxtil, indústria automóvel e distribuição, sempre com responsabilidade direta por equipas, orçamentos e resultados. Em paralelo, mantive uma atividade constante de formação — mais de três décadas a preparar profissionais em áreas como sistemas de informação, bases de dados e ferramentas de produtividade.",
+        "Ao longo do percurso, dirigi departamentos de informática e tecnologia em setores como saúde, têxtil e indústria automóvel, sempre com responsabilidade direta por equipas, orçamentos e resultados. Em paralelo, mantive uma atividade constante de formação — mais de três décadas a preparar profissionais em áreas como sistemas de informação, bases de dados e ferramentas de produtividade.",
         "Atualmente concilio a função de CTO/CIO do Grupo Filinto Mota, onde reporto diretamente ao CEO, com a docência na Universidade Aberta, onde leciono Sistemas Operativos, Modelação de Sistemas de Informação e Sistemas de Gestão de Bases de Dados. Estou também a concluir o Doutoramento em Ciência e Tecnologia Web na UTAD.",
       ],
     },
@@ -298,6 +298,7 @@ export const content: Record<Locale, Content> = {
           company: "Confetil – Confeções Têxteis, Lda.",
           location: "Maia",
           period: "2015 – 2017",
+          deptHead: true,
           bullets: [
             "Liderei o desenvolvimento de um ERP têxtil integrado — encomendas, desenvolvimento de produto, planeamento, corte, produção e stocks — reduzindo em 40% o tempo de planeamento e gestão de stocks.",
             "Implementei soluções mobile/web para gestão de encomendas e produção, aumentando a eficiência operacional em 35%.",
@@ -412,7 +413,7 @@ export const content: Record<Locale, Content> = {
         },
         {
           name: "Transformação Digital — Grupo Filinto Mota",
-          tag: "Distribuição e Retalho",
+          tag: "Indústria Automóvel",
           description:
             "Programa de digitalização multi-empresa, com integração de ERPs, data warehouse e políticas de cibersegurança.",
         },
@@ -539,16 +540,11 @@ export const content: Record<Locale, Content> = {
         {
           title: "Indústria Automóvel",
           description:
-            "Sistemas de gestão para centros de inspeção automóvel (CONTROLAUTO, MASTERTEST).",
+            "Sistemas de gestão para centros de inspeção automóvel (CONTROLAUTO, MASTERTEST) e transformação digital multi-empresa no Grupo Filinto Mota.",
         },
         {
           title: "Tintas",
           description: "Sistemas de gestão comercial e produção (Douro, Anar).",
-        },
-        {
-          title: "Distribuição e Retalho",
-          description:
-            "ERP e digitalização de processos administrativos e comerciais (Grupo Filinto Mota).",
         },
       ],
     },
@@ -634,14 +630,14 @@ export const content: Record<Locale, Content> = {
     stats: [
       { value: "38", label: "years of career" },
       { value: "40", label: "years as trainer" },
-      { value: "4", label: "departments led" },
+      { value: "5", label: "departments led" },
       { value: "5", label: "countries with delivered projects" },
     ],
     about: {
       title: "About me",
       paragraphs: [
         "I am a technology executive with a 38-year career built on two mutually reinforcing pillars: department leadership and teaching. I started training in 1986, even before beginning my career as a programmer analyst, and have never stopped combining responsibility for managing teams and systems with training and developing people — first as a section lead, then as department head in several organizations, and since 2023 also as a university lecturer.",
-        "Throughout my career I have run IT and technology departments in sectors such as healthcare, textiles, automotive and distribution, always with direct responsibility for teams, budgets and results. In parallel, I have kept up a constant training activity — more than three decades preparing professionals in areas such as information systems, databases and productivity tools.",
+        "Throughout my career I have run IT and technology departments in sectors such as healthcare, textiles and automotive, always with direct responsibility for teams, budgets and results. In parallel, I have kept up a constant training activity — more than three decades preparing professionals in areas such as information systems, databases and productivity tools.",
         "I currently combine the role of CTO/CIO at Grupo Filinto Mota, reporting directly to the CEO, with lecturing at Universidade Aberta, where I teach Operating Systems, Information Systems Modeling and Database Management Systems. I am also completing a PhD in Web Science and Technology at UTAD.",
       ],
     },
@@ -749,6 +745,7 @@ export const content: Record<Locale, Content> = {
           company: "Confetil – Confeções Têxteis, Lda.",
           location: "Maia",
           period: "2015 – 2017",
+          deptHead: true,
           bullets: [
             "Led development of an integrated textile ERP — orders, product development, planning, cutting, production and stock — cutting planning and stock management time by 40%.",
             "Implemented mobile/web solutions for order and production management, increasing operational efficiency by 35%.",
@@ -863,7 +860,7 @@ export const content: Record<Locale, Content> = {
         },
         {
           name: "Digital Transformation — Grupo Filinto Mota",
-          tag: "Distribution & Retail",
+          tag: "Automotive",
           description:
             "Multi-company digitization program, with ERP integration, data warehouse and cybersecurity policies.",
         },
@@ -990,16 +987,11 @@ export const content: Record<Locale, Content> = {
         {
           title: "Automotive",
           description:
-            "Management systems for vehicle inspection centers (CONTROLAUTO, MASTERTEST).",
+            "Management systems for vehicle inspection centers (CONTROLAUTO, MASTERTEST) and multi-company digital transformation at Grupo Filinto Mota.",
         },
         {
           title: "Paints",
           description: "Commercial and production management systems (Douro, Anar).",
-        },
-        {
-          title: "Distribution & Retail",
-          description:
-            "ERP and digitization of administrative and commercial processes (Grupo Filinto Mota).",
         },
       ],
     },
