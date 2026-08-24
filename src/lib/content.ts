@@ -176,6 +176,8 @@ export interface Content {
     ctaDownloadAts: string;
     qrCaption: string;
     ctaVcard: string;
+    bookingUrl: string;
+    ctaBook: string;
   };
   footer: {
     rights: string;
@@ -213,7 +215,7 @@ export const content: Record<Locale, Content> = {
       positioning:
         "Sempre aberto a boas conversas sobre liderança tecnológica e ensino.",
       location: "Porto, Portugal",
-      ctaContact: "Contactar",
+      ctaContact: "Marcar Reunião",
       ctaCv: "Ver percurso completo",
       ctaDownload: "Download CV",
     },
@@ -719,6 +721,8 @@ export const content: Record<Locale, Content> = {
       ctaDownloadAts: "Versão simples para portais de candidatura",
       qrCaption: "Aponta a câmara para guardar o meu contacto",
       ctaVcard: "Guardar contacto (vCard)",
+      bookingUrl: "https://cal.com/rui-alberto-tomas-neves-rzjfz6",
+      ctaBook: "Marcar Reunião",
     },
     footer: {
       rights: "Todos os direitos reservados.",
@@ -750,7 +754,7 @@ export const content: Record<Locale, Content> = {
       positioning:
         "Always open to good conversations about technology leadership and teaching.",
       location: "Porto, Portugal",
-      ctaContact: "Get in touch",
+      ctaContact: "Book a Meeting",
       ctaCv: "See full journey",
       ctaDownload: "Download CV",
     },
@@ -1253,6 +1257,8 @@ export const content: Record<Locale, Content> = {
       ctaDownloadAts: "Plain version for application portals",
       qrCaption: "Point your camera to save my contact",
       ctaVcard: "Save contact (vCard)",
+      bookingUrl: "https://cal.com/rui-alberto-tomas-neves-rzjfz6",
+      ctaBook: "Book a Meeting",
     },
     footer: {
       rights: "All rights reserved.",

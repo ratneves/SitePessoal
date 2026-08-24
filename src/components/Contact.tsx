@@ -18,8 +18,16 @@ export function Contact() {
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <a
-            href={`mailto:${t.contact.email}`}
+            href={t.contact.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-white text-primary-dark px-6 py-3 text-sm font-semibold hover:bg-white/90 transition-colors"
+          >
+            {t.contact.ctaBook}
+          </a>
+          <a
+            href={`mailto:${t.contact.email}`}
+            className="rounded-full border border-white/40 px-6 py-3 text-sm font-semibold hover:bg-white/10 transition-colors"
           >
             {t.contact.email}
           </a>

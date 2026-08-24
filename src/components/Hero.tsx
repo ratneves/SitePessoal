@@ -46,7 +46,9 @@ export function Hero() {
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
-              href="#contact"
+              href={t.contact.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-white text-primary-dark px-6 py-3 text-sm font-semibold hover:bg-white/90 transition-colors"
             >
               {t.hero.ctaContact}
