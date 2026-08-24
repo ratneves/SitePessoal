@@ -164,14 +164,14 @@ export const content: Record<Locale, Content> = {
     },
     stats: [
       { value: "38", label: "anos de carreira" },
-      { value: "35+", label: "anos como formador" },
+      { value: "40", label: "anos como formador" },
       { value: "4", label: "departamentos liderados" },
       { value: "5", label: "países com projetos entregues" },
     ],
     about: {
       title: "Sobre mim",
       paragraphs: [
-        "Sou um executivo de tecnologia com uma carreira de 38 anos, construída sobre dois pilares que se reforçam mutuamente: a liderança de departamentos e a docência. Desde 1988 que combino a responsabilidade de gerir equipas e sistemas com a de formar e desenvolver pessoas — primeiro como responsável de setor, depois como diretor de departamento em várias organizações, e desde 2023 também como docente universitário.",
+        "Sou um executivo de tecnologia com uma carreira de 38 anos, construída sobre dois pilares que se reforçam mutuamente: a liderança de departamentos e a docência. Comecei a dar formação em 1986, ainda antes de iniciar funções como analista programador, e desde então nunca deixei de combinar a responsabilidade de gerir equipas e sistemas com a de formar e desenvolver pessoas — primeiro como responsável de setor, depois como diretor de departamento em várias organizações, e desde 2023 também como docente universitário.",
         "Ao longo do percurso, dirigi departamentos de informática e tecnologia em setores como saúde, têxtil, indústria automóvel e distribuição, sempre com responsabilidade direta por equipas, orçamentos e resultados. Em paralelo, mantive uma atividade constante de formação — mais de três décadas a preparar profissionais em áreas como sistemas de informação, bases de dados e ferramentas de produtividade.",
         "Atualmente concilio a função de CTO/CIO do Grupo Filinto Mota, onde reporto diretamente ao CEO, com a docência na Universidade Aberta, onde leciono Sistemas Operativos, Modelação de Sistemas de Informação e Sistemas de Gestão de Bases de Dados. Estou também a concluir o Doutoramento em Ciência e Tecnologia Web na UTAD.",
       ],
@@ -209,15 +209,15 @@ export const content: Record<Locale, Content> = {
         },
         {
           role: "Formador",
-          institution: "Diversas entidades e empresas",
-          period: "1990 – Atual",
+          institution: "INESP, Unicenter-Joviform, Orientaris e IPLNT",
+          period: "1986 – Atual",
           icon: "trainer",
           featured: true,
           details: [
-            "Cursos de informática na ótica do utilizador",
-            "Microsoft Office e produtividade",
-            "Power BI e análise de dados",
-            "Gestão e administração de bases de dados",
+            "Introdução à informática, Windows e Internet",
+            "Programação — de Cobol e Basic a linguagens atuais",
+            "Microsoft Office avançado (Excel, Word, Access) e Power BI",
+            "Gestão e administração de bases de dados, gestão de stocks",
           ],
         },
         {
@@ -298,6 +298,7 @@ export const content: Record<Locale, Content> = {
             "Geri projetos com metodologia Scrum (ferramenta interna e JIRA) para clientes como o Grupo Brisa (CONTROLAUTO) e o Grupo BPI (MASTERTEST), contribuindo para um aumento de 15% na quota de mercado dos clientes.",
             "Desenvolvi aplicações desktop, web e mobile (iOS, Android, Windows), acelerando o time-to-market de novos produtos em 25%.",
             "Certifiquei software junto da Autoridade Tributária e geri projetos internacionais em Angola, Moçambique, Cabo Verde, Argentina e Colômbia.",
+            "Apoiei a gestão e desenvolvimento dos ERPs próprios da empresa: ediGest (faturação) e easyScreen (POS).",
           ],
         },
       ],
@@ -310,6 +311,7 @@ export const content: Record<Locale, Content> = {
           period: "2000 – 2010",
           bullets: [
             "Geri uma equipa de 4 elementos (2 programadores, 2 técnicos) em projetos de saúde, têxtil e tintas para clientes como o Hospital Santa Maria e o Centro Hospitalar São Francisco, incluindo integração com equipamento médico de imagiologia via DICOM e administração de bases de dados SQL Server com clustering e replicação.",
+            "Outros clientes: Bracara (têxtil), Altere (tinturaria), Clisa, Soerad e IPR (saúde), CDRE (radiologia), Sifamolar (móveis), e as fábricas de tintas Douro e Anar.",
           ],
         },
         {
@@ -349,6 +351,18 @@ export const content: Record<Locale, Content> = {
             "Implementação do ERP de inspeção automóvel ediGCIA, com controlo de processos e conformidade regulamentar.",
         },
         {
+          name: "CIMA, SA",
+          tag: "Indústria Automóvel",
+          description:
+            "Implementação do ERP ediGCIA para gestão de centro de inspeção automóvel.",
+        },
+        {
+          name: "Pneugiro",
+          tag: "Indústria Automóvel",
+          description:
+            "Módulo de gestão de serviços e obras para oficinas automóvel.",
+        },
+        {
           name: "Hospital Santa Maria e Centro Hospitalar São Francisco",
           tag: "Saúde",
           description:
@@ -361,10 +375,22 @@ export const content: Record<Locale, Content> = {
             "Aplicação a medida para controlo de armazém, faturação e replicação de dados entre a sede em Luanda e filiais em Huambo e Benfica.",
         },
         {
+          name: "Prova-ímpar",
+          tag: "Internacional",
+          description:
+            "Sistema de atribuição de matrículas para máquinas industriais, com módulo instalado em Portugal e Moçambique.",
+        },
+        {
           name: "ERP Têxtil Confetil",
           tag: "Têxtil",
           description:
             "Sistema integrado ponta a ponta, da encomenda do cliente à expedição, com automação de máquinas de produção.",
+        },
+        {
+          name: "D'Accord",
+          tag: "Recursos Humanos",
+          description:
+            "Aplicação a medida para controlo de recursos humanos e cálculo de horas, integrada com o sistema de vencimentos.",
         },
         {
           name: "Transformação Digital — Grupo Filinto Mota",
@@ -423,15 +449,20 @@ export const content: Record<Locale, Content> = {
         {
           title: "Desenvolvimento",
           items: [
+            "COBOL",
             "C#",
             "ASP.NET",
             "VB.NET",
+            "Pascal",
+            "C++",
             "SQL",
             "PL/SQL",
             "Java",
             "PHP",
             "Python",
             "APIs REST",
+            "Linq",
+            "Entity Framework",
             "Microserviços (familiaridade)",
             "OutSystems (noções)",
           ],
@@ -557,14 +588,14 @@ export const content: Record<Locale, Content> = {
     },
     stats: [
       { value: "38", label: "years of career" },
-      { value: "35+", label: "years as trainer" },
+      { value: "40", label: "years as trainer" },
       { value: "4", label: "departments led" },
       { value: "5", label: "countries with delivered projects" },
     ],
     about: {
       title: "About me",
       paragraphs: [
-        "I am a technology executive with a 38-year career built on two mutually reinforcing pillars: department leadership and teaching. Since 1988 I have combined responsibility for managing teams and systems with training and developing people — first as a section lead, then as department head in several organizations, and since 2023 also as a university lecturer.",
+        "I am a technology executive with a 38-year career built on two mutually reinforcing pillars: department leadership and teaching. I started training in 1986, even before beginning my career as a programmer analyst, and have never stopped combining responsibility for managing teams and systems with training and developing people — first as a section lead, then as department head in several organizations, and since 2023 also as a university lecturer.",
         "Throughout my career I have run IT and technology departments in sectors such as healthcare, textiles, automotive and distribution, always with direct responsibility for teams, budgets and results. In parallel, I have kept up a constant training activity — more than three decades preparing professionals in areas such as information systems, databases and productivity tools.",
         "I currently combine the role of CTO/CIO at Grupo Filinto Mota, reporting directly to the CEO, with lecturing at Universidade Aberta, where I teach Operating Systems, Information Systems Modeling and Database Management Systems. I am also completing a PhD in Web Science and Technology at UTAD.",
       ],
@@ -602,15 +633,15 @@ export const content: Record<Locale, Content> = {
         },
         {
           role: "Trainer",
-          institution: "Various organizations and companies",
-          period: "1990 – Present",
+          institution: "INESP, Unicenter-Joviform, Orientaris and IPLNT",
+          period: "1986 – Present",
           icon: "trainer",
           featured: true,
           details: [
-            "End-user computing courses",
-            "Microsoft Office and productivity",
-            "Power BI and data analysis",
-            "Database management and administration",
+            "Introduction to computing, Windows and Internet",
+            "Programming — from Cobol and Basic to modern languages",
+            "Advanced Microsoft Office (Excel, Word, Access) and Power BI",
+            "Database management and administration, stock management",
           ],
         },
         {
@@ -691,6 +722,7 @@ export const content: Record<Locale, Content> = {
             "Managed projects using Scrum (in-house tool and JIRA) for clients such as Grupo Brisa (CONTROLAUTO) and Grupo BPI (MASTERTEST), contributing to a 15% market-share increase for those clients.",
             "Developed desktop, web and mobile applications (iOS, Android, Windows), accelerating time-to-market for new products by 25%.",
             "Certified software with the Portuguese Tax Authority and managed international projects in Angola, Mozambique, Cape Verde, Argentina and Colombia.",
+            "Supported management and development of the company's in-house ERPs: ediGest (billing) and easyScreen (POS).",
           ],
         },
       ],
@@ -703,6 +735,7 @@ export const content: Record<Locale, Content> = {
           period: "2000 – 2010",
           bullets: [
             "Managed a 4-person team (2 developers, 2 technicians) on healthcare, textile and paint industry projects for clients such as Hospital Santa Maria and Centro Hospitalar São Francisco, including integration with medical imaging equipment via DICOM and SQL Server database administration with clustering and replication.",
+            "Other clients: Bracara (textiles), Altere (dyeing), Clisa, Soerad and IPR (healthcare), CDRE (radiology), Sifamolar (furniture), and the Douro and Anar paint factories.",
           ],
         },
         {
@@ -742,6 +775,18 @@ export const content: Record<Locale, Content> = {
             "Implementation of the ediGCIA vehicle inspection ERP, with process control and regulatory compliance.",
         },
         {
+          name: "CIMA, SA",
+          tag: "Automotive",
+          description:
+            "Implementation of the ediGCIA ERP for a vehicle inspection center.",
+        },
+        {
+          name: "Pneugiro",
+          tag: "Automotive",
+          description:
+            "Service and workshop management module for auto repair shops.",
+        },
+        {
           name: "Hospital Santa Maria and Centro Hospitalar São Francisco",
           tag: "Healthcare",
           description:
@@ -754,10 +799,22 @@ export const content: Record<Locale, Content> = {
             "Custom application for warehouse control, billing and data replication between headquarters in Luanda and branches in Huambo and Benfica.",
         },
         {
+          name: "Prova-ímpar",
+          tag: "International",
+          description:
+            "License-plate assignment system for industrial machinery, with a module deployed in Portugal and Mozambique.",
+        },
+        {
           name: "Confetil Textile ERP",
           tag: "Textiles",
           description:
             "End-to-end integrated system, from customer order to shipment, with production machine automation.",
+        },
+        {
+          name: "D'Accord",
+          tag: "Human Resources",
+          description:
+            "Custom application for HR and hours management, integrated with the payroll system.",
         },
         {
           name: "Digital Transformation — Grupo Filinto Mota",
@@ -816,15 +873,20 @@ export const content: Record<Locale, Content> = {
         {
           title: "Development",
           items: [
+            "COBOL",
             "C#",
             "ASP.NET",
             "VB.NET",
+            "Pascal",
+            "C++",
             "SQL",
             "PL/SQL",
             "Java",
             "PHP",
             "Python",
             "REST APIs",
+            "Linq",
+            "Entity Framework",
             "Microservices (familiar)",
             "OutSystems (basic)",
           ],
