@@ -142,6 +142,20 @@ function CaseStudyCard({
       </div>
 
       <div className="bg-primary-dark px-7 sm:px-9 py-6">
+        {item.results && (
+          <div className="mb-5 grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-3">
+            {item.results.map((r) => (
+              <div key={r.label}>
+                <p className="text-xl sm:text-2xl font-extrabold text-white">
+                  {r.value}
+                </p>
+                <p className="mt-0.5 text-[11px] leading-snug text-white/60">
+                  {r.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
         <ul className="space-y-2.5">
           {item.highlights.map((h) => (
             <li key={h} className="flex items-start gap-2.5 text-sm text-white/90">

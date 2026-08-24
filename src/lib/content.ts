@@ -43,6 +43,7 @@ export interface CaseStudy {
   highlights: string[];
   diagramStages: string[];
   diagramBranch?: { label: string; intoIndex: number };
+  results?: { value: string; label: string }[];
 }
 
 export interface EducationItem {
@@ -421,6 +422,14 @@ export const content: Record<Locale, Content> = {
           ],
           diagramStages: ["Admissão", "Marcação", "Processo Clínico", "Faturação"],
           diagramBranch: { label: "TAC / RX — DICOM", intoIndex: 2 },
+          results: [
+            { value: "150+", label: "postos em simultâneo, 4 localizações" },
+            { value: "<30 seg", label: "disponibilização de exame DICOM (antes ~15 min)" },
+            { value: "-60%", label: "tempo de admissão (8-10 min → 3-4 min)" },
+            { value: "-70%", label: "tempo de faturação, glosas abaixo de 2%" },
+            { value: "-30%", label: "taxa de no-show em marcações" },
+            { value: "22.667h", label: "poupadas por ano em todas as áreas" },
+          ],
         },
         {
           title: "Data Warehouse & Business Intelligence Corporativo",
@@ -941,6 +950,14 @@ export const content: Record<Locale, Content> = {
           ],
           diagramStages: ["Admission", "Scheduling", "Clinical Record", "Billing"],
           diagramBranch: { label: "CT / X-Ray — DICOM", intoIndex: 2 },
+          results: [
+            { value: "150+", label: "workstations simultaneously, 4 locations" },
+            { value: "<30 sec", label: "DICOM exam availability (down from ~15 min)" },
+            { value: "-60%", label: "admission time (8-10 min → 3-4 min)" },
+            { value: "-70%", label: "billing processing time, under 2% rejections" },
+            { value: "-30%", label: "no-show rate on scheduled appointments" },
+            { value: "22,667h", label: "saved per year across all areas" },
+          ],
         },
         {
           title: "Corporate Data Warehouse & Business Intelligence",
