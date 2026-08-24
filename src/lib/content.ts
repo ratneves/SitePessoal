@@ -128,6 +128,7 @@ export interface Content {
     linkedin: string;
     location: string;
     ctaDownload: string;
+    ctaDownloadAts: string;
   };
   footer: {
     rights: string;
@@ -160,7 +161,7 @@ export const content: Record<Locale, Content> = {
         "CTO / CIO",
       ],
       tagline:
-        "38 anos de carreira a liderar departamentos de tecnologia e a formar pessoas — da sala de aula à direção executiva, sempre a construir equipas e a transmitir conhecimento.",
+        "Uma combinação pouco comum: a disciplina de liderar departamentos de tecnologia e a vocação de ensinar. A mesma capacidade de simplificar, formar e desenvolver pessoas que aplico em sala de aula, aplico também nas equipas que dirijo há mais de três décadas.",
       positioning:
         "Sempre aberto a boas conversas sobre liderança tecnológica e ensino.",
       location: "Porto, Portugal",
@@ -562,6 +563,7 @@ export const content: Record<Locale, Content> = {
       linkedin: "linkedin.com/in/raneves",
       location: "Porto, Portugal",
       ctaDownload: "Descarregar CV (PDF)",
+      ctaDownloadAts: "Versão simples para portais de candidatura",
     },
     footer: {
       rights: "Todos os direitos reservados.",
@@ -588,7 +590,7 @@ export const content: Record<Locale, Content> = {
       name: "Rui Neves",
       roles: ["Department Head", "University Lecturer & Trainer", "CTO / CIO"],
       tagline:
-        "38 years leading technology departments and teaching people — from the classroom to executive leadership, always building teams and passing on knowledge.",
+        "An uncommon combination: the discipline of leading technology departments and the vocation for teaching. The same ability to simplify, train and develop people I bring to the classroom, I also bring to the teams I have led for more than three decades.",
       positioning:
         "Always open to good conversations about technology leadership and teaching.",
       location: "Porto, Portugal",
@@ -990,6 +992,7 @@ export const content: Record<Locale, Content> = {
       linkedin: "linkedin.com/in/raneves",
       location: "Porto, Portugal",
       ctaDownload: "Download CV (PDF)",
+      ctaDownloadAts: "Plain version for application portals",
     },
     footer: {
       rights: "All rights reserved.",

@@ -46,6 +46,14 @@ export function Contact() {
           </a>
         </div>
 
+        <a
+          href={`${basePath}/cv/CV-Rui-Neves-ATS-${locale.toUpperCase()}.pdf`}
+          download
+          className="mt-4 inline-block text-xs text-white/50 hover:text-white/80 underline underline-offset-2 transition-colors"
+        >
+          {t.contact.ctaDownloadAts}
+        </a>
+
         <p className="mt-8 text-sm text-white/60">{t.contact.location}</p>
       </div>
     </section>
