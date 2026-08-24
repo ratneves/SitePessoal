@@ -654,7 +654,7 @@ export const content: Record<Locale, Content> = {
       items: [
         "Membro do Conselho Pedagógico do ISTEC (nomeado pela associação de estudantes).",
         "Participação ativa em seminários e formações Microsoft ao longo da carreira: Roadshow SQL Server, MSDN, .NET e Windows Server.",
-        "Participação na Web Summit 2023, e nas edições de 2023, 2024 e 2025 do Portugal Digital Summit e do QSP Summit.",
+        "Participação na Web Summit 2023, no Akeneo Unlock London 2025, e nas edições de 2023, 2024 e 2025 do Portugal Digital Summit e do QSP Summit.",
       ],
     },
     contact: {
@@ -1154,7 +1154,7 @@ export const content: Record<Locale, Content> = {
       items: [
         "Member of the ISTEC Pedagogical Council (appointed by the students' association).",
         "Active participation in Microsoft seminars and training throughout his career: SQL Server Roadshow, MSDN, .NET and Windows Server.",
-        "Attended Web Summit 2023, and the 2023, 2024 and 2025 editions of Portugal Digital Summit and QSP Summit.",
+        "Attended Web Summit 2023, Akeneo Unlock London 2025, and the 2023, 2024 and 2025 editions of Portugal Digital Summit and QSP Summit.",
       ],
     },
     contact: {
