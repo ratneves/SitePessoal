@@ -7,14 +7,19 @@ export function Projects() {
   const { t } = useLanguage();
   return (
     <Section id="projects" title={t.projects.title} tone="dark">
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-2">
         {t.projects.items.map((project) => (
           <div
             key={project.name}
-            className="rounded-2xl bg-white/5 border border-white/10 p-6 hover:bg-white/10 transition-colors"
+            className="group rounded-2xl bg-white/5 border border-white/15 p-7 hover:bg-white/10 hover:border-white/30 transition-all"
           >
-            <h3 className="font-bold text-white">{project.name}</h3>
-            <p className="mt-2 text-sm text-white/75 leading-relaxed">
+            <span className="inline-block rounded-full bg-white/15 text-white/85 text-[11px] font-semibold uppercase tracking-wide px-3 py-1">
+              {project.tag}
+            </span>
+            <h3 className="mt-4 font-bold text-white text-lg leading-snug">
+              {project.name}
+            </h3>
+            <p className="mt-2.5 text-sm text-white/75 leading-relaxed">
               {project.description}
             </p>
           </div>

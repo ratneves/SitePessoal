@@ -14,16 +14,21 @@ export interface ExperienceItem {
   deptHead?: boolean;
 }
 
+export type TeachingIcon = "university" | "trainer" | "certificate" | "council";
+
 export interface TeachingItem {
   role: string;
   institution: string;
   period: string;
   details: string[];
+  icon: TeachingIcon;
+  featured?: boolean;
 }
 
 export interface ProjectItem {
   name: string;
   description: string;
+  tag: string;
 }
 
 export interface EducationItem {
@@ -194,6 +199,8 @@ export const content: Record<Locale, Content> = {
           role: "Docente Universitário",
           institution: "Universidade Aberta (UAb)",
           period: "2023 – Atual",
+          icon: "university",
+          featured: true,
           details: [
             "Sistemas Operativos",
             "Modelação de Sistemas de Informação",
@@ -204,6 +211,8 @@ export const content: Record<Locale, Content> = {
           role: "Formador",
           institution: "Diversas entidades e empresas",
           period: "1990 – Atual",
+          icon: "trainer",
+          featured: true,
           details: [
             "Cursos de informática na ótica do utilizador",
             "Microsoft Office e produtividade",
@@ -215,6 +224,7 @@ export const content: Record<Locale, Content> = {
           role: "Formação Pedagógica de Formadores (CAP/CCP)",
           institution: "ENA",
           period: "2009",
+          icon: "certificate",
           details: [
             "Certificação de Competências Pedagógicas, formalizando a atividade de formação já exercida",
           ],
@@ -223,6 +233,7 @@ export const content: Record<Locale, Content> = {
           role: "Membro do Conselho Pedagógico",
           institution: "ISTEC — Instituto Superior de Tecnologias Avançadas",
           period: "Nomeado pela associação de estudantes",
+          icon: "council",
           details: [
             "Participação ativa nos órgãos pedagógicos da instituição onde se licenciou",
           ],
@@ -327,31 +338,37 @@ export const content: Record<Locale, Content> = {
       items: [
         {
           name: "CONTROLAUTO (Grupo Brisa)",
+          tag: "Indústria Automóvel",
           description:
             "Sistema de gestão para centros de inspeção automóvel, com integração completa de processos de inspeção e faturação.",
         },
         {
           name: "MASTERTEST (Grupo BPI)",
+          tag: "Indústria Automóvel",
           description:
             "Implementação do ERP de inspeção automóvel ediGCIA, com controlo de processos e conformidade regulamentar.",
         },
         {
           name: "Hospital Santa Maria e Centro Hospitalar São Francisco",
+          tag: "Saúde",
           description:
             "Desenvolvimento e integração de sistemas de gestão hospitalar com equipamento de imagiologia médica via DICOM.",
         },
         {
           name: "Autoramaia (Angola)",
+          tag: "Internacional",
           description:
             "Aplicação a medida para controlo de armazém, faturação e replicação de dados entre a sede em Luanda e filiais em Huambo e Benfica.",
         },
         {
           name: "ERP Têxtil Confetil",
+          tag: "Têxtil",
           description:
             "Sistema integrado ponta a ponta, da encomenda do cliente à expedição, com automação de máquinas de produção.",
         },
         {
           name: "Transformação Digital — Grupo Filinto Mota",
+          tag: "Distribuição e Retalho",
           description:
             "Programa de digitalização multi-empresa, com integração de ERPs, data warehouse e políticas de cibersegurança.",
         },
@@ -575,6 +592,8 @@ export const content: Record<Locale, Content> = {
           role: "University Lecturer",
           institution: "Universidade Aberta (UAb)",
           period: "2023 – Present",
+          icon: "university",
+          featured: true,
           details: [
             "Operating Systems",
             "Information Systems Modeling",
@@ -585,6 +604,8 @@ export const content: Record<Locale, Content> = {
           role: "Trainer",
           institution: "Various organizations and companies",
           period: "1990 – Present",
+          icon: "trainer",
+          featured: true,
           details: [
             "End-user computing courses",
             "Microsoft Office and productivity",
@@ -596,6 +617,7 @@ export const content: Record<Locale, Content> = {
           role: "Pedagogical Training for Trainers (CAP/CCP)",
           institution: "ENA",
           period: "2009",
+          icon: "certificate",
           details: [
             "Certified pedagogical competencies, formalizing training activity already underway",
           ],
@@ -604,6 +626,7 @@ export const content: Record<Locale, Content> = {
           role: "Member of the Pedagogical Council",
           institution: "ISTEC — Instituto Superior de Tecnologias Avançadas",
           period: "Appointed by the students' association",
+          icon: "council",
           details: [
             "Active participation in the governing pedagogical bodies of the institution where he graduated",
           ],
@@ -708,31 +731,37 @@ export const content: Record<Locale, Content> = {
       items: [
         {
           name: "CONTROLAUTO (Grupo Brisa)",
+          tag: "Automotive",
           description:
             "Management system for vehicle inspection centers, with full integration of inspection and billing processes.",
         },
         {
           name: "MASTERTEST (Grupo BPI)",
+          tag: "Automotive",
           description:
             "Implementation of the ediGCIA vehicle inspection ERP, with process control and regulatory compliance.",
         },
         {
           name: "Hospital Santa Maria and Centro Hospitalar São Francisco",
+          tag: "Healthcare",
           description:
             "Development and integration of hospital management systems with medical imaging equipment via DICOM.",
         },
         {
           name: "Autoramaia (Angola)",
+          tag: "International",
           description:
             "Custom application for warehouse control, billing and data replication between headquarters in Luanda and branches in Huambo and Benfica.",
         },
         {
           name: "Confetil Textile ERP",
+          tag: "Textiles",
           description:
             "End-to-end integrated system, from customer order to shipment, with production machine automation.",
         },
         {
           name: "Digital Transformation — Grupo Filinto Mota",
+          tag: "Distribution & Retail",
           description:
             "Multi-company digitization program, with ERP integration, data warehouse and cybersecurity policies.",
         },
