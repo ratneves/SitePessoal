@@ -70,7 +70,7 @@ export function Hero() {
         <div className="justify-self-center lg:justify-self-end">
           <div className="relative h-56 w-56 sm:h-72 sm:w-72 rounded-full ring-4 ring-white/25 ring-offset-4 ring-offset-primary-dark overflow-hidden shadow-2xl">
             <Image
-              src="/images/rui-neves.jpg"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/rui-neves.jpg`}
               alt="Rui Neves"
               fill
               sizes="(min-width: 640px) 288px, 224px"
