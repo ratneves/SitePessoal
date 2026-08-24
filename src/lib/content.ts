@@ -187,7 +187,7 @@ export interface Content {
 export const content: Record<Locale, Content> = {
   pt: {
     meta: {
-      title: "Rui Neves — Diretor de Departamento & Docente",
+      title: "Rui Neves — Diretor de Departamento & Tutor",
       description:
         "Percurso profissional de Rui Alberto Tomás Neves: 38 anos em liderança de departamentos de tecnologia e docência, de analista programador a CTO/CIO.",
     },
@@ -228,9 +228,9 @@ export const content: Record<Locale, Content> = {
     about: {
       title: "Sobre mim",
       paragraphs: [
-        "Sou um executivo de tecnologia com uma carreira de 38 anos, construída sobre dois pilares que se reforçam mutuamente: a liderança de departamentos e a docência. Comecei a dar formação em 1986, ainda antes de iniciar funções como analista programador, e desde então nunca deixei de combinar a responsabilidade de gerir equipas e sistemas com a de formar e desenvolver pessoas — primeiro como responsável de setor, depois como diretor de departamento em várias organizações, e desde 2023 também como docente universitário.",
+        "Sou um executivo de tecnologia com uma carreira de 38 anos, construída sobre dois pilares que se reforçam mutuamente: a liderança de departamentos e a docência. Comecei a dar formação em 1986, ainda antes de iniciar funções como analista programador, e desde então nunca deixei de combinar a responsabilidade de gerir equipas e sistemas com a de formar e desenvolver pessoas — primeiro como responsável de setor, depois como diretor de departamento em várias organizações, e desde 2023 também como tutor universitário.",
         "Ao longo do percurso, dirigi departamentos de informática e tecnologia em setores como saúde, têxtil e indústria automóvel, sempre com responsabilidade direta por equipas, orçamentos e resultados. Em paralelo, mantive uma atividade constante de formação — mais de três décadas a preparar profissionais em áreas como sistemas de informação, bases de dados e ferramentas de produtividade.",
-        "Atualmente concilio a função de CTO/CIO do Grupo Filinto Mota, onde reporto diretamente ao CEO, com a docência na Universidade Aberta, onde leciono Sistemas Operativos, Modelação de Sistemas de Informação e Sistemas de Gestão de Bases de Dados. Estou também a concluir o Doutoramento em Ciência e Tecnologia Web na UTAD.",
+        "Atualmente concilio a função de CTO/CIO do Grupo Filinto Mota, onde reporto diretamente ao CEO, com a tutoria na Universidade Aberta, onde leciono Sistemas Operativos, Modelação de Sistemas de Informação e Sistemas de Gestão de Bases de Dados. Estou também a concluir o Doutoramento em Ciência e Tecnologia Web na UTAD.",
       ],
     },
     leadership: {
@@ -731,7 +731,7 @@ export const content: Record<Locale, Content> = {
   },
   en: {
     meta: {
-      title: "Rui Neves — Department Head & Lecturer",
+      title: "Rui Neves — Department Head & Tutor",
       description:
         "Professional journey of Rui Alberto Tomás Neves: 38 years leading technology departments and teaching, from programmer analyst to CTO/CIO.",
     },
@@ -768,9 +768,9 @@ export const content: Record<Locale, Content> = {
     about: {
       title: "About me",
       paragraphs: [
-        "I am a technology executive with a 38-year career built on two mutually reinforcing pillars: department leadership and teaching. I started training in 1986, even before beginning my career as a programmer analyst, and have never stopped combining responsibility for managing teams and systems with training and developing people — first as a section lead, then as department head in several organizations, and since 2023 also as a university lecturer.",
+        "I am a technology executive with a 38-year career built on two mutually reinforcing pillars: department leadership and teaching. I started training in 1986, even before beginning my career as a programmer analyst, and have never stopped combining responsibility for managing teams and systems with training and developing people — first as a section lead, then as department head in several organizations, and since 2023 also as a university tutor.",
         "Throughout my career I have run IT and technology departments in sectors such as healthcare, textiles and automotive, always with direct responsibility for teams, budgets and results. In parallel, I have kept up a constant training activity — more than three decades preparing professionals in areas such as information systems, databases and productivity tools.",
-        "I currently combine the role of CTO/CIO at Grupo Filinto Mota, reporting directly to the CEO, with lecturing at Universidade Aberta, where I teach Operating Systems, Information Systems Modeling and Database Management Systems. I am also completing a PhD in Web Science and Technology at UTAD.",
+        "I currently combine the role of CTO/CIO at Grupo Filinto Mota, reporting directly to the CEO, with tutoring at Universidade Aberta, where I teach Operating Systems, Information Systems Modeling and Database Management Systems. I am also completing a PhD in Web Science and Technology at UTAD.",
       ],
     },
     leadership: {
