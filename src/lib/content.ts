@@ -222,7 +222,7 @@ export const content: Record<Locale, Content> = {
     stats: [
       { value: "38", label: "anos de carreira" },
       { value: "40", label: "anos como formador" },
-      { value: "5", label: "departamentos liderados" },
+      { value: "6", label: "departamentos liderados" },
       { value: "5", label: "países com projetos entregues" },
     ],
     about: {
@@ -363,10 +363,11 @@ export const content: Record<Locale, Content> = {
       additionalTitle: "Experiência Adicional",
       additional: [
         {
-          role: "Analista de Sistemas de Informação",
+          role: "Responsável de Desenvolvimento / Analista de Sistemas de Informação",
           company: "Facevisível, Lda",
           location: "Porto",
           period: "2000 – 2010",
+          deptHead: true,
           bullets: [
             "Geri uma equipa de 4 elementos (2 programadores, 2 técnicos) em projetos de saúde, têxtil e tintas para clientes como o Hospital Santa Maria e o Centro Hospitalar São Francisco, incluindo integração com equipamento médico de imagiologia via DICOM e administração de bases de dados SQL Server com clustering e replicação.",
             "Outros clientes: Bracara (têxtil), Altere (tinturaria), Clisa, Soerad e IPR (saúde), CDRE (radiologia), Sifamolar (móveis), e as fábricas de tintas Douro e Anar.",
@@ -761,7 +762,7 @@ export const content: Record<Locale, Content> = {
     stats: [
       { value: "38", label: "years of career" },
       { value: "40", label: "years as trainer" },
-      { value: "5", label: "departments led" },
+      { value: "6", label: "departments led" },
       { value: "5", label: "countries with delivered projects" },
     ],
     about: {
@@ -902,10 +903,11 @@ export const content: Record<Locale, Content> = {
       additionalTitle: "Additional Experience",
       additional: [
         {
-          role: "Information Systems Analyst",
+          role: "Development Manager / Information Systems Analyst",
           company: "Facevisível, Lda",
           location: "Porto",
           period: "2000 – 2010",
+          deptHead: true,
           bullets: [
             "Managed a 4-person team (2 developers, 2 technicians) on healthcare, textile and paint industry projects for clients such as Hospital Santa Maria and Centro Hospitalar São Francisco, including integration with medical imaging equipment via DICOM and SQL Server database administration with clustering and replication.",
             "Other clients: Bracara (textiles), Altere (dyeing), Clisa, Soerad and IPR (healthcare), CDRE (radiology), Sifamolar (furniture), and the Douro and Anar paint factories.",
