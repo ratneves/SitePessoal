@@ -207,7 +207,7 @@ export const content: Record<Locale, Content> = {
       name: "Rui Neves",
       roles: [
         "Diretor de Departamento",
-        "Docente Universitário & Formador",
+        "Tutor Universitário & Formador",
         "CTO / CIO",
       ],
       tagline:
@@ -253,7 +253,7 @@ export const content: Record<Locale, Content> = {
         "A par da liderança executiva, a docência é uma constante desde 1986 — da formação profissional em contexto empresarial ao ensino universitário.",
       items: [
         {
-          role: "Docente Universitário",
+          role: "Tutor",
           institution: "Universidade Aberta (UAb)",
           period: "2023 – Atual",
           icon: "university",
@@ -749,7 +749,7 @@ export const content: Record<Locale, Content> = {
     hero: {
       kicker: "Rui Alberto Tomás Neves",
       name: "Rui Neves",
-      roles: ["Department Head", "University Lecturer & Trainer", "CTO / CIO"],
+      roles: ["Department Head", "University Tutor & Trainer", "CTO / CIO"],
       tagline:
         "An uncommon combination: the discipline of leading technology departments and the vocation for teaching. The same ability to simplify, train and develop people I bring to the classroom, I also bring to the teams I have led for more than three decades.",
       positioning:
@@ -793,7 +793,7 @@ export const content: Record<Locale, Content> = {
         "Alongside executive leadership, teaching has been a constant since 1986 — from corporate professional training to university lecturing.",
       items: [
         {
-          role: "University Lecturer",
+          role: "Tutor",
           institution: "Universidade Aberta (UAb)",
           period: "2023 – Present",
           icon: "university",
