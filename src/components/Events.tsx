@@ -6,7 +6,7 @@ import { Section } from "./Section";
 export function Events() {
   const { t } = useLanguage();
   return (
-    <Section id="events" title={t.events.title} intro={t.events.intro}>
+    <Section id="events" title={t.events.title} intro={t.events.intro} compact>
       <div className="flex flex-wrap gap-4">
         {t.events.items.map((event) => (
           <div

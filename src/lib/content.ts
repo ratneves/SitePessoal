@@ -41,6 +41,8 @@ export interface CaseStudy {
   integration: string;
   tech: string[];
   highlights: string[];
+  diagramStages: string[];
+  diagramBranch?: { label: string; intoIndex: number };
 }
 
 export interface EducationItem {
@@ -61,6 +63,7 @@ export interface SectorItem {
 
 export interface TestimonialItem {
   quote: string;
+  name: string;
   role: string;
 }
 
@@ -81,6 +84,7 @@ export interface Content {
     experience: string;
     projects: string;
     education: string;
+    events: string;
     skills: string;
     contact: string;
   };
@@ -189,6 +193,7 @@ export const content: Record<Locale, Content> = {
       experience: "Percurso",
       projects: "Projetos",
       education: "Formação",
+      events: "Eventos",
       skills: "Competências",
       contact: "Contacto",
     },
@@ -414,6 +419,8 @@ export const content: Record<Locale, Content> = {
             "Cobre o ciclo completo do doente — admissão, marcação, atendimento clínico e faturação — num único sistema integrado.",
             "Acompanhamento direto dos clientes desde a implementação até à fase de exploração corrente.",
           ],
+          diagramStages: ["Admissão", "Marcação", "Processo Clínico", "Faturação"],
+          diagramBranch: { label: "TAC / RX — DICOM", intoIndex: 2 },
         },
         {
           title: "Data Warehouse & Business Intelligence Corporativo",
@@ -441,6 +448,7 @@ export const content: Record<Locale, Content> = {
             "Mais de 40 dashboards em produção, cobrindo vendas, stocks, financeiro, compras, contabilístico e administração.",
             "Reduziu o tempo de elaboração de relatórios de gestão em 60%, com dados atualizados nas 10 empresas do grupo.",
           ],
+          diagramStages: ["6 sistemas de origem", "Data Warehouse (SQL Server)", "Power BI — 40+ dashboards"],
         },
       ],
     },
@@ -638,16 +646,19 @@ export const content: Record<Locale, Content> = {
         {
           quote:
             "Tem uma capacidade rara de traduzir prioridades estratégicas em execução prática sem perder ritmo. Foi uma peça-chave na estabilização de operações críticas e na entrega de resultados sólidos sob forte pressão de mercado.",
+          name: "Adriano Portocarrero",
           role: "Ex-CEO / Liderança Executiva",
         },
         {
           quote:
             "Trabalhar em equipa com ele torna os projetos complexos muito mais simples. Destaco o pragmatismo técnico, a comunicação transparente e a disponibilidade constante para desbloquear problemas em momentos decisivos.",
+          name: "Rui Silva",
           role: "Colega / Par de Trabalho",
         },
         {
           quote:
             "A clareza com que desconstrói conceitos difíceis e a paciência para orientar o raciocínio marcaram profundamente o meu percurso. Vai muito além da matéria teórica: ensina a pensar e a ter autonomia profissional.",
+          name: "António Simões",
           role: "Aluno / Mentorado",
         },
       ],
@@ -706,6 +717,7 @@ export const content: Record<Locale, Content> = {
       experience: "Experience",
       projects: "Projects",
       education: "Education",
+      events: "Events",
       skills: "Skills",
       contact: "Contact",
     },
@@ -927,6 +939,8 @@ export const content: Record<Locale, Content> = {
             "Covers the full patient journey — admission, scheduling, clinical care and billing — in a single integrated system.",
             "Hands-on client support from implementation through steady-state operation.",
           ],
+          diagramStages: ["Admission", "Scheduling", "Clinical Record", "Billing"],
+          diagramBranch: { label: "CT / X-Ray — DICOM", intoIndex: 2 },
         },
         {
           title: "Corporate Data Warehouse & Business Intelligence",
@@ -951,6 +965,7 @@ export const content: Record<Locale, Content> = {
             "40+ dashboards in production, covering sales, stock, finance, purchasing, accounting and management.",
             "Cut management reporting time by 60%, with up-to-date data across the group's 10 companies.",
           ],
+          diagramStages: ["6 source systems", "Data Warehouse (SQL Server)", "Power BI — 40+ dashboards"],
         },
       ],
     },
@@ -1148,16 +1163,19 @@ export const content: Record<Locale, Content> = {
         {
           quote:
             "They have a rare ability to translate strategic priorities into practical execution without losing pace. They were a key player in stabilizing critical operations and delivering solid results under strong market pressure.",
+          name: "Adriano Portocarrero",
           role: "Former CEO / Executive Leadership",
         },
         {
           quote:
             "Working as a team with them makes complex projects far simpler. I'd highlight their technical pragmatism, transparent communication, and constant availability to unblock problems at decisive moments.",
+          name: "Rui Silva",
           role: "Colleague / Work Peer",
         },
         {
           quote:
             "The clarity with which they break down difficult concepts, and the patience to guide your reasoning, left a deep mark on my journey. They go far beyond theory: they teach you how to think and how to be professionally autonomous.",
+          name: "António Simões",
           role: "Student / Mentee",
         },
       ],

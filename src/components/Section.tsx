@@ -6,6 +6,7 @@ interface SectionProps {
   intro?: string;
   children: ReactNode;
   tone?: "light" | "dark";
+  compact?: boolean;
   className?: string;
 }
 
@@ -15,18 +16,19 @@ export function Section({
   intro,
   children,
   tone = "light",
+  compact = false,
   className = "",
 }: SectionProps) {
   const dark = tone === "dark";
   return (
     <section
       id={id}
-      className={`scroll-mt-20 py-16 sm:py-24 ${
+      className={`scroll-mt-20 ${compact ? "py-10 sm:py-14" : "py-16 sm:py-24"} ${
         dark ? "bg-primary-dark text-white" : "bg-background text-foreground"
       } ${className}`}
     >
       <div className="mx-auto max-w-6xl px-6">
-        <div className="mb-10 sm:mb-14 max-w-3xl">
+        <div className={`${compact ? "mb-6 sm:mb-8" : "mb-10 sm:mb-14"} max-w-3xl`}>
           <h2
             className={`text-2xl sm:text-3xl font-bold tracking-tight ${
               dark ? "text-white" : "text-primary-dark"

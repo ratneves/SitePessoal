@@ -4,6 +4,65 @@ import { useLanguage } from "@/lib/LanguageContext";
 import { Section } from "./Section";
 import type { CaseStudy } from "@/lib/content";
 
+function FlowDiagram({
+  stages,
+  branch,
+}: {
+  stages: string[];
+  branch?: { label: string; intoIndex: number };
+}) {
+  return (
+    <div className="mt-5 flex flex-wrap items-center gap-x-1.5 gap-y-3">
+      {stages.map((stage, i) => (
+        <div key={stage} className="flex items-center gap-1.5">
+          <div className="min-w-[92px] rounded-lg bg-primary/8 border border-primary/20 px-3 py-2.5 text-center text-xs font-semibold text-primary-dark">
+            {stage}
+          </div>
+          {i < stages.length - 1 && (
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="shrink-0 text-primary/40"
+            >
+              <path
+                d="M5 12h14M13 6l6 6-6 6"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          )}
+          {branch && branch.intoIndex === i && (
+            <div className="flex items-center gap-1.5">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                className="shrink-0 text-primary/40"
+              >
+                <path
+                  d="M12 19V5M6 11l6-6 6 6"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <div className="rounded-lg border border-dashed border-primary/30 bg-surface px-3 py-2 text-center text-[11px] font-medium text-foreground/60">
+                {branch.label}
+              </div>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function CaseStudyCard({
   item,
   modulesLabel,
@@ -40,6 +99,8 @@ function CaseStudyCard({
             </span>
           ))}
         </div>
+
+        <FlowDiagram stages={item.diagramStages} branch={item.diagramBranch} />
 
         <div className="mt-6 grid gap-6 sm:grid-cols-2">
           <div>

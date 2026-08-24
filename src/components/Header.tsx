@@ -23,6 +23,7 @@ export function Header() {
     { href: "#experience", label: t.nav.experience },
     { href: "#projects", label: t.nav.projects },
     { href: "#education", label: t.nav.education },
+    { href: "#events", label: t.nav.events },
     { href: "#skills", label: t.nav.skills },
     { href: "#contact", label: t.nav.contact },
   ];

@@ -6,11 +6,11 @@ import { Section } from "./Section";
 export function Testimonials() {
   const { t } = useLanguage();
   return (
-    <Section id="testimonials" title={t.testimonials.title}>
+    <Section id="testimonials" title={t.testimonials.title} compact>
       <div className="grid gap-6 sm:grid-cols-3">
         {t.testimonials.items.map((item) => (
           <figure
-            key={item.role}
+            key={item.name}
             className="flex flex-col rounded-2xl border border-border bg-surface p-6"
           >
             <svg
@@ -28,8 +28,11 @@ export function Testimonials() {
             <blockquote className="flex-1 text-sm text-foreground/80 leading-relaxed">
               {item.quote}
             </blockquote>
-            <figcaption className="mt-4 text-xs font-semibold text-primary uppercase tracking-wide">
-              {item.role}
+            <figcaption className="mt-4">
+              <p className="text-sm font-bold text-primary-dark">{item.name}</p>
+              <p className="text-xs font-semibold text-primary uppercase tracking-wide">
+                {item.role}
+              </p>
             </figcaption>
           </figure>
         ))}
