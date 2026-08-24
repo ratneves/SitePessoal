@@ -47,6 +47,11 @@ export interface SectorItem {
   description: string;
 }
 
+export interface TestimonialItem {
+  quote: string;
+  role: string;
+}
+
 export interface Content {
   meta: {
     title: string;
@@ -111,6 +116,10 @@ export interface Content {
   sectors: {
     title: string;
     items: SectorItem[];
+  };
+  testimonials: {
+    title: string;
+    items: TestimonialItem[];
   };
   languages: {
     title: string;
@@ -541,6 +550,26 @@ export const content: Record<Locale, Content> = {
         },
       ],
     },
+    testimonials: {
+      title: "O Que Dizem",
+      items: [
+        {
+          quote:
+            "Tem uma capacidade rara de traduzir prioridades estratégicas em execução prática sem perder ritmo. Foi uma peça-chave na estabilização de operações críticas e na entrega de resultados sólidos sob forte pressão de mercado.",
+          role: "Ex-CEO / Liderança Executiva",
+        },
+        {
+          quote:
+            "Trabalhar em equipa com ele torna os projetos complexos muito mais simples. Destaco o pragmatismo técnico, a comunicação transparente e a disponibilidade constante para desbloquear problemas em momentos decisivos.",
+          role: "Colega / Par de Trabalho",
+        },
+        {
+          quote:
+            "A clareza com que desconstrói conceitos difíceis e a paciência para orientar o raciocínio marcaram profundamente o meu percurso. Vai muito além da matéria teórica: ensina a pensar e a ter autonomia profissional.",
+          role: "Aluno / Mentorado",
+        },
+      ],
+    },
     languages: {
       title: "Idiomas",
       items: [
@@ -967,6 +996,26 @@ export const content: Record<Locale, Content> = {
           title: "Distribution & Retail",
           description:
             "ERP and digitization of administrative and commercial processes (Grupo Filinto Mota).",
+        },
+      ],
+    },
+    testimonials: {
+      title: "What People Say",
+      items: [
+        {
+          quote:
+            "They have a rare ability to translate strategic priorities into practical execution without losing pace. They were a key player in stabilizing critical operations and delivering solid results under strong market pressure.",
+          role: "Former CEO / Executive Leadership",
+        },
+        {
+          quote:
+            "Working as a team with them makes complex projects far simpler. I'd highlight their technical pragmatism, transparent communication, and constant availability to unblock problems at decisive moments.",
+          role: "Colleague / Work Peer",
+        },
+        {
+          quote:
+            "The clarity with which they break down difficult concepts, and the patience to guide your reasoning, left a deep mark on my journey. They go far beyond theory: they teach you how to think and how to be professionally autonomous.",
+          role: "Student / Mentee",
         },
       ],
     },
