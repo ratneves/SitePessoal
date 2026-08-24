@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Rui Alberto Tomás Neves
+N:Neves;Rui;Alberto Tomás;;
+ORG:Grupo Filinto Mota
+TITLE:CTO / CIO
+TEL;TYPE=CELL,VOICE:+351914183500
+EMAIL;TYPE=INTERNET:raneves@gmail.com
+URL:https://www.linkedin.com/in/raneves
+URL:https://site-pessoal-henna-eta.vercel.app
+ADR;TYPE=WORK:;;;Porto;;;Portugal
+END:VCARD

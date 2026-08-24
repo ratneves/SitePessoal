@@ -54,6 +54,27 @@ export function Contact() {
           {t.contact.ctaDownloadAts}
         </a>
 
+        <div className="mt-12 flex flex-col items-center gap-3">
+          <div className="rounded-2xl bg-white p-3 shadow-lg">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`${basePath}/vcard/vcard-qr.svg`}
+              alt="QR code"
+              width={128}
+              height={128}
+              className="h-28 w-28 sm:h-32 sm:w-32"
+            />
+          </div>
+          <p className="text-xs text-white/60 max-w-xs">{t.contact.qrCaption}</p>
+          <a
+            href={`${basePath}/vcard/Rui-Neves.vcf`}
+            download
+            className="text-xs text-white/50 hover:text-white/80 underline underline-offset-2 transition-colors"
+          >
+            {t.contact.ctaVcard}
+          </a>
+        </div>
+
         <p className="mt-8 text-sm text-white/60">{t.contact.location}</p>
       </div>
     </section>

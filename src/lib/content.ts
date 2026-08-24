@@ -138,6 +138,8 @@ export interface Content {
     location: string;
     ctaDownload: string;
     ctaDownloadAts: string;
+    qrCaption: string;
+    ctaVcard: string;
   };
   footer: {
     rights: string;
@@ -593,6 +595,8 @@ export const content: Record<Locale, Content> = {
       location: "Porto, Portugal",
       ctaDownload: "Descarregar CV (PDF)",
       ctaDownloadAts: "Versão simples para portais de candidatura",
+      qrCaption: "Aponta a câmara para guardar o meu contacto",
+      ctaVcard: "Guardar contacto (vCard)",
     },
     footer: {
       rights: "Todos os direitos reservados.",
@@ -1042,6 +1046,8 @@ export const content: Record<Locale, Content> = {
       location: "Porto, Portugal",
       ctaDownload: "Download CV (PDF)",
       ctaDownloadAts: "Plain version for application portals",
+      qrCaption: "Point your camera to save my contact",
+      ctaVcard: "Save contact (vCard)",
     },
     footer: {
       rights: "All rights reserved.",
