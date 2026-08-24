@@ -67,9 +67,11 @@ export interface Content {
     name: string;
     roles: string[];
     tagline: string;
+    positioning: string;
     location: string;
     ctaContact: string;
     ctaCv: string;
+    ctaDownload: string;
   };
   stats: StatItem[];
   about: {
@@ -125,6 +127,7 @@ export interface Content {
     phone: string;
     linkedin: string;
     location: string;
+    ctaDownload: string;
   };
   footer: {
     rights: string;
@@ -158,9 +161,12 @@ export const content: Record<Locale, Content> = {
       ],
       tagline:
         "38 anos de carreira a liderar departamentos de tecnologia e a formar pessoas — da sala de aula à direção executiva, sempre a construir equipas e a transmitir conhecimento.",
+      positioning:
+        "Sempre aberto a boas conversas sobre liderança tecnológica e ensino.",
       location: "Porto, Portugal",
       ctaContact: "Contactar",
       ctaCv: "Ver percurso completo",
+      ctaDownload: "Download CV",
     },
     stats: [
       { value: "38", label: "anos de carreira" },
@@ -555,6 +561,7 @@ export const content: Record<Locale, Content> = {
       phone: "+351 914 183 500",
       linkedin: "linkedin.com/in/raneves",
       location: "Porto, Portugal",
+      ctaDownload: "Descarregar CV (PDF)",
     },
     footer: {
       rights: "Todos os direitos reservados.",
@@ -582,9 +589,12 @@ export const content: Record<Locale, Content> = {
       roles: ["Department Head", "University Lecturer & Trainer", "CTO / CIO"],
       tagline:
         "38 years leading technology departments and teaching people — from the classroom to executive leadership, always building teams and passing on knowledge.",
+      positioning:
+        "Always open to good conversations about technology leadership and teaching.",
       location: "Porto, Portugal",
       ctaContact: "Get in touch",
       ctaCv: "See full journey",
+      ctaDownload: "Download CV",
     },
     stats: [
       { value: "38", label: "years of career" },
@@ -979,6 +989,7 @@ export const content: Record<Locale, Content> = {
       phone: "+351 914 183 500",
       linkedin: "linkedin.com/in/raneves",
       location: "Porto, Portugal",
+      ctaDownload: "Download CV (PDF)",
     },
     footer: {
       rights: "All rights reserved.",

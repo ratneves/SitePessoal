@@ -5,6 +5,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 
 export function Hero() {
   const { t } = useLanguage();
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
   return (
     <section
@@ -40,6 +41,9 @@ export function Hero() {
           <p className="mt-7 max-w-xl text-lg text-white/85 leading-relaxed">
             {t.hero.tagline}
           </p>
+          <p className="mt-3 max-w-xl text-sm text-white/60">
+            {t.hero.positioning}
+          </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
               href="#contact"
@@ -52,6 +56,22 @@ export function Hero() {
               className="rounded-full border border-white/40 px-6 py-3 text-sm font-semibold hover:bg-white/10 transition-colors"
             >
               {t.hero.ctaCv}
+            </a>
+            <a
+              href={`${basePath}/cv/CV-Rui-Neves.pdf`}
+              download
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white/85 hover:text-white transition-colors"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 3v12m0 0l-4-4m4 4l4-4M5 19h14"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              {t.hero.ctaDownload}
             </a>
           </div>
           <p className="mt-8 flex items-center gap-2 text-sm text-white/70">

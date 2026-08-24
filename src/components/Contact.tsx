@@ -4,6 +4,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 
 export function Contact() {
   const { t } = useLanguage();
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   return (
     <section id="contact" className="scroll-mt-20 bg-primary-dark text-white">
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-24 text-center">
@@ -35,6 +36,13 @@ export function Contact() {
             className="rounded-full border border-white/40 px-6 py-3 text-sm font-semibold hover:bg-white/10 transition-colors"
           >
             LinkedIn
+          </a>
+          <a
+            href={`${basePath}/cv/CV-Rui-Neves.pdf`}
+            download
+            className="rounded-full border border-white/40 px-6 py-3 text-sm font-semibold hover:bg-white/10 transition-colors"
+          >
+            {t.contact.ctaDownload}
           </a>
         </div>
 

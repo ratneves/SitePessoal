@@ -33,3 +33,27 @@ html {
   background: var(--color-primary);
   color: #ffffff;
 }
+
+@media print {
+  header {
+    display: none !important;
+  }
+
+  body,
+  section,
+  section * {
+    background: #ffffff !important;
+    color: #0f1e2e !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    border-color: #dbe5ee !important;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  section {
+    break-inside: avoid;
+  }
+}
