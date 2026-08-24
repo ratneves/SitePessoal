@@ -1,0 +1,128 @@
+"use client";
+
+import { useLanguage } from "@/lib/LanguageContext";
+import { Section } from "./Section";
+import type { CaseStudy } from "@/lib/content";
+
+function CaseStudyCard({
+  item,
+  modulesLabel,
+  integrationLabel,
+}: {
+  item: CaseStudy;
+  modulesLabel: string;
+  integrationLabel: string;
+}) {
+  return (
+    <div className="rounded-2xl border border-border bg-white shadow-sm overflow-hidden">
+      <div className="p-7 sm:p-9">
+        <h3 className="text-xl sm:text-2xl font-bold text-primary-dark">
+          {item.title}
+        </h3>
+        <p className="mt-1.5 text-sm font-medium text-foreground/60">
+          {item.client}
+        </p>
+        <p className="text-xs font-semibold text-primary uppercase tracking-wide">
+          {item.period}
+        </p>
+
+        <p className="mt-4 text-sm sm:text-base text-foreground/80 leading-relaxed">
+          {item.summary}
+        </p>
+
+        <div className="mt-5 flex flex-wrap gap-3">
+          {item.scale.map((s) => (
+            <span
+              key={s}
+              className="rounded-lg bg-primary/8 text-primary-dark text-sm font-bold px-3.5 py-2"
+            >
+              {s}
+            </span>
+          ))}
+        </div>
+
+        <div className="mt-6 grid gap-6 sm:grid-cols-2">
+          <div>
+            <h4 className="text-xs font-bold text-foreground/50 uppercase tracking-wide mb-2">
+              {modulesLabel}
+            </h4>
+            <ul className="space-y-1.5">
+              {item.modules.map((m) => (
+                <li
+                  key={m}
+                  className="flex items-start gap-2 text-sm text-foreground/75"
+                >
+                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                  {m}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-xs font-bold text-foreground/50 uppercase tracking-wide mb-2">
+              {integrationLabel}
+            </h4>
+            <p className="text-sm text-foreground/75 leading-relaxed">
+              {item.integration}
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-6 flex flex-wrap gap-1.5">
+          {item.tech.map((tech) => (
+            <span
+              key={tech}
+              className="rounded-full bg-surface border border-border text-xs font-medium text-foreground/70 px-2.5 py-1"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-primary-dark px-7 sm:px-9 py-6">
+        <ul className="space-y-2.5">
+          {item.highlights.map((h) => (
+            <li key={h} className="flex items-start gap-2.5 text-sm text-white/90">
+              <svg
+                className="mt-0.5 shrink-0"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <circle cx="12" cy="12" r="10" fill="white" fillOpacity="0.15" />
+                <path
+                  d="M8 12.5l2.5 2.5L16 9"
+                  stroke="white"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              {h}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+export function CaseStudies() {
+  const { t } = useLanguage();
+  return (
+    <Section id="case-studies" title={t.caseStudies.title} intro={t.caseStudies.intro}>
+      <div className="grid gap-8 lg:grid-cols-2 items-start">
+        {t.caseStudies.items.map((item) => (
+          <CaseStudyCard
+            key={item.title}
+            item={item}
+            modulesLabel={t.caseStudies.modulesLabel}
+            integrationLabel={t.caseStudies.integrationLabel}
+          />
+        ))}
+      </div>
+    </Section>
+  );
+}

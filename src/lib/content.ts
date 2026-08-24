@@ -31,6 +31,18 @@ export interface ProjectItem {
   tag: string;
 }
 
+export interface CaseStudy {
+  title: string;
+  client: string;
+  period: string;
+  summary: string;
+  scale: string[];
+  modules: string[];
+  integration: string;
+  tech: string[];
+  highlights: string[];
+}
+
 export interface EducationItem {
   title: string;
   institution: string;
@@ -100,6 +112,13 @@ export interface Content {
     items: ExperienceItem[];
     additionalTitle: string;
     additional: ExperienceItem[];
+  };
+  caseStudies: {
+    title: string;
+    intro: string;
+    modulesLabel: string;
+    integrationLabel: string;
+    items: CaseStudy[];
   };
   projects: {
     title: string;
@@ -211,7 +230,7 @@ export const content: Record<Locale, Content> = {
     teaching: {
       title: "Docência & Formação",
       intro:
-        "A par da liderança executiva, a docência é uma constante desde 1990 — da formação profissional em contexto empresarial ao ensino universitário.",
+        "A par da liderança executiva, a docência é uma constante desde 1986 — da formação profissional em contexto empresarial ao ensino universitário.",
       items: [
         {
           role: "Docente Universitário",
@@ -354,8 +373,69 @@ export const content: Record<Locale, Content> = {
         },
       ],
     },
+    caseStudies: {
+      title: "Projetos em Destaque",
+      intro:
+        "Dois projetos que resumem bem a dupla vertente técnica e organizacional do meu percurso — do desenho de sistemas críticos ao alinhamento de dados de um grupo inteiro.",
+      modulesLabel: "Módulos",
+      integrationLabel: "Integração",
+      items: [
+        {
+          title: "Sistema de Gestão Hospitalar",
+          client: "CHSF — Centro Hospitalar São Francisco e CLISA — Clínica de Santo António",
+          period: "Facevisível, 2000 – 2010",
+          summary:
+            "Desenvolvimento e implementação de uma solução hospitalar completa, cobrindo todo o ciclo do doente — da admissão ao processo clínico — instalada em dois grupos de saúde: o CHSF, em Leiria, e a CLISA, com unidades na Reboleira, Sacavém e Odivelas.",
+          scale: [
+            "CHSF: mais de 50 postos de trabalho",
+            "CLISA: mais de 100 postos, em 3 localizações",
+          ],
+          modules: [
+            "Admissões e triagem",
+            "Marcações e agenda clínica",
+            "Faturação (particular e convenções/seguradoras)",
+            "Processo clínico eletrónico",
+          ],
+          integration:
+            "Integração direta com equipamento de imagiologia médica (TAC e RX) via protocolo DICOM, associando os exames automaticamente ao processo clínico do doente, sem introdução manual.",
+          tech: ["COBOL", "Visual Basic .NET", "C#", "ASP.NET", "SQL Server", "DICOM"],
+          highlights: [
+            "Solução em produção contínua em 2 grupos de saúde, mais de 150 postos de trabalho no total.",
+            "Cobre o ciclo completo do doente — admissão, marcação, atendimento clínico e faturação — num único sistema integrado.",
+            "Acompanhamento direto dos clientes desde a implementação até à fase de exploração corrente.",
+          ],
+        },
+        {
+          title: "Data Warehouse & Business Intelligence Corporativo",
+          client: "Grupo Filinto Mota — 10 empresas",
+          period: "2019 – atual",
+          summary:
+            "Estruturação do data warehouse do grupo, centralizando dados de todos os sistemas de gestão em uso numa única fonte de verdade, com mais de 40 dashboards em Power BI para apoio à decisão nas 10 empresas do grupo.",
+          scale: [
+            "10 empresas do grupo",
+            "40+ dashboards em produção",
+          ],
+          modules: [
+            "Vendas",
+            "Stocks",
+            "Financeiro",
+            "Compras",
+            "Contabilístico",
+            "Administração",
+          ],
+          integration:
+            "Integração de dados de todos os sistemas do grupo (Sage X3, Sage People, DMS Icar, Xrt, Signature e GISe Rentway) numa camada única de data warehouse, eliminando reconciliação manual entre sistemas.",
+          tech: ["SQL Server", "Power BI", "Power Query", "Power Automate", "ETL"],
+          highlights: [
+            "Arquitetura desenhada e implementada de raiz: SQL Server como motor central, com Power BI, Power Query e Power Automate para consumo, refresco e automação dos dados.",
+            "Mais de 40 dashboards em produção, cobrindo vendas, stocks, financeiro, compras, contabilístico e administração.",
+            "Reduziu o tempo de elaboração de relatórios de gestão em 60%, com dados atualizados nas 10 empresas do grupo.",
+          ],
+        },
+      ],
+    },
     projects: {
-      title: "Projetos de Destaque",
+      title: "Outros Projetos",
       items: [
         {
           name: "CONTROLAUTO (Grupo Brisa)",
@@ -382,10 +462,10 @@ export const content: Record<Locale, Content> = {
             "Módulo de gestão de serviços e obras para oficinas automóvel.",
         },
         {
-          name: "Hospital Santa Maria e Centro Hospitalar São Francisco",
+          name: "Hospital Santa Maria",
           tag: "Saúde",
           description:
-            "Desenvolvimento e integração de sistemas de gestão hospitalar com equipamento de imagiologia médica via DICOM.",
+            "Desenvolvimento e integração de sistema de gestão hospitalar com equipamento de imagiologia médica via DICOM.",
         },
         {
           name: "Autoramaia (Angola)",
@@ -410,12 +490,6 @@ export const content: Record<Locale, Content> = {
           tag: "Recursos Humanos",
           description:
             "Aplicação a medida para controlo de recursos humanos e cálculo de horas, integrada com o sistema de vencimentos.",
-        },
-        {
-          name: "Transformação Digital — Grupo Filinto Mota",
-          tag: "Indústria Automóvel",
-          description:
-            "Programa de digitalização multi-empresa, com integração de ERPs, data warehouse e políticas de cibersegurança.",
         },
       ],
     },
@@ -658,7 +732,7 @@ export const content: Record<Locale, Content> = {
     teaching: {
       title: "Teaching & Training",
       intro:
-        "Alongside executive leadership, teaching has been a constant since 1990 — from corporate professional training to university lecturing.",
+        "Alongside executive leadership, teaching has been a constant since 1986 — from corporate professional training to university lecturing.",
       items: [
         {
           role: "University Lecturer",
@@ -801,8 +875,66 @@ export const content: Record<Locale, Content> = {
         },
       ],
     },
-    projects: {
+    caseStudies: {
       title: "Featured Projects",
+      intro:
+        "Two projects that capture the dual technical and organizational thread of my career — from designing critical systems to aligning data across an entire group.",
+      modulesLabel: "Modules",
+      integrationLabel: "Integration",
+      items: [
+        {
+          title: "Hospital Management System",
+          client: "CHSF — Centro Hospitalar São Francisco and CLISA — Clínica de Santo António",
+          period: "Facevisível, 2000 – 2010",
+          summary:
+            "Development and implementation of a complete hospital solution, covering the full patient journey — from admission to clinical record — deployed at two healthcare groups: CHSF, in Leiria, and CLISA, with units in Reboleira, Sacavém and Odivelas.",
+          scale: [
+            "CHSF: 50+ workstations",
+            "CLISA: 100+ workstations across 3 locations",
+          ],
+          modules: [
+            "Admissions and triage",
+            "Scheduling and clinical calendar",
+            "Billing (private and insurer agreements)",
+            "Electronic clinical record",
+          ],
+          integration:
+            "Direct integration with medical imaging equipment (CT and X-ray) via the DICOM protocol, automatically linking exams to the patient's clinical record without manual entry.",
+          tech: ["COBOL", "Visual Basic .NET", "C#", "ASP.NET", "SQL Server", "DICOM"],
+          highlights: [
+            "System in continuous production across 2 healthcare groups, 150+ workstations in total.",
+            "Covers the full patient journey — admission, scheduling, clinical care and billing — in a single integrated system.",
+            "Hands-on client support from implementation through steady-state operation.",
+          ],
+        },
+        {
+          title: "Corporate Data Warehouse & Business Intelligence",
+          client: "Grupo Filinto Mota — 10 companies",
+          period: "2019 – present",
+          summary:
+            "Structured the group's data warehouse, centralizing data from every management system in use into a single source of truth, with 40+ Power BI dashboards supporting decision-making across the group's 10 companies.",
+          scale: ["10 companies in the group", "40+ dashboards in production"],
+          modules: [
+            "Sales",
+            "Stock",
+            "Finance",
+            "Purchasing",
+            "Accounting",
+            "Management",
+          ],
+          integration:
+            "Integrates data from every system used across the group (Sage X3, Sage People, DMS Icar, Xrt, Signature and GISe Rentway) into a single data warehouse layer, eliminating manual reconciliation between systems.",
+          tech: ["SQL Server", "Power BI", "Power Query", "Power Automate", "ETL"],
+          highlights: [
+            "Architecture designed and built from the ground up: SQL Server as the central engine, with Power BI, Power Query and Power Automate for consumption, refresh and data automation.",
+            "40+ dashboards in production, covering sales, stock, finance, purchasing, accounting and management.",
+            "Cut management reporting time by 60%, with up-to-date data across the group's 10 companies.",
+          ],
+        },
+      ],
+    },
+    projects: {
+      title: "Other Projects",
       items: [
         {
           name: "CONTROLAUTO (Grupo Brisa)",
@@ -829,10 +961,10 @@ export const content: Record<Locale, Content> = {
             "Service and workshop management module for auto repair shops.",
         },
         {
-          name: "Hospital Santa Maria and Centro Hospitalar São Francisco",
+          name: "Hospital Santa Maria",
           tag: "Healthcare",
           description:
-            "Development and integration of hospital management systems with medical imaging equipment via DICOM.",
+            "Development and integration of hospital management system with medical imaging equipment via DICOM.",
         },
         {
           name: "Autoramaia (Angola)",
@@ -857,12 +989,6 @@ export const content: Record<Locale, Content> = {
           tag: "Human Resources",
           description:
             "Custom application for HR and hours management, integrated with the payroll system.",
-        },
-        {
-          name: "Digital Transformation — Grupo Filinto Mota",
-          tag: "Automotive",
-          description:
-            "Multi-company digitization program, with ERP integration, data warehouse and cybersecurity policies.",
         },
       ],
     },
