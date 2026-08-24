@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useLanguage } from "@/lib/LanguageContext";
 
 export function Hero() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
   return (
@@ -58,7 +58,7 @@ export function Hero() {
               {t.hero.ctaCv}
             </a>
             <a
-              href={`${basePath}/cv/CV-Rui-Neves.pdf`}
+              href={`${basePath}/cv/CV-Rui-Neves-${locale.toUpperCase()}.pdf`}
               download
               className="inline-flex items-center gap-2 text-sm font-semibold text-white/85 hover:text-white transition-colors"
             >
