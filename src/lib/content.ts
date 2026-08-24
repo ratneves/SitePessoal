@@ -128,6 +128,8 @@ export interface Content {
     intro: string;
     modulesLabel: string;
     integrationLabel: string;
+    detailsLabel: string;
+    hideDetailsLabel: string;
     items: CaseStudy[];
   };
   projects: {
@@ -395,6 +397,8 @@ export const content: Record<Locale, Content> = {
         "Dois projetos que resumem bem a dupla vertente técnica e organizacional do meu percurso — do desenho de sistemas críticos ao alinhamento de dados de um grupo inteiro.",
       modulesLabel: "Módulos",
       integrationLabel: "Integração",
+      detailsLabel: "Ver detalhes técnicos",
+      hideDetailsLabel: "Ocultar detalhes técnicos",
       items: [
         {
           title: "Sistema de Gestão Hospitalar",
@@ -930,6 +934,8 @@ export const content: Record<Locale, Content> = {
         "Two projects that capture the dual technical and organizational thread of my career — from designing critical systems to aligning data across an entire group.",
       modulesLabel: "Modules",
       integrationLabel: "Integration",
+      detailsLabel: "View technical details",
+      hideDetailsLabel: "Hide technical details",
       items: [
         {
           title: "Hospital Management System",

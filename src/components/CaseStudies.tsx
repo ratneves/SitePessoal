@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { Section } from "./Section";
 import type { CaseStudy } from "@/lib/content";
@@ -67,11 +68,17 @@ function CaseStudyCard({
   item,
   modulesLabel,
   integrationLabel,
+  detailsLabel,
+  hideDetailsLabel,
 }: {
   item: CaseStudy;
   modulesLabel: string;
   integrationLabel: string;
+  detailsLabel: string;
+  hideDetailsLabel: string;
 }) {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="rounded-2xl border border-border bg-white shadow-sm overflow-hidden">
       <div className="p-7 sm:p-9">
@@ -100,62 +107,91 @@ function CaseStudyCard({
           ))}
         </div>
 
-        <FlowDiagram stages={item.diagramStages} branch={item.diagramBranch} />
-
-        <div className="mt-6 grid gap-6 sm:grid-cols-2">
-          <div>
-            <h4 className="text-xs font-bold text-foreground/50 uppercase tracking-wide mb-2">
-              {modulesLabel}
-            </h4>
-            <ul className="space-y-1.5">
-              {item.modules.map((m) => (
-                <li
-                  key={m}
-                  className="flex items-start gap-2 text-sm text-foreground/75"
-                >
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
-                  {m}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-xs font-bold text-foreground/50 uppercase tracking-wide mb-2">
-              {integrationLabel}
-            </h4>
-            <p className="text-sm text-foreground/75 leading-relaxed">
-              {item.integration}
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-6 flex flex-wrap gap-1.5">
-          {item.tech.map((tech) => (
-            <span
-              key={tech}
-              className="rounded-full bg-surface border border-border text-xs font-medium text-foreground/70 px-2.5 py-1"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      <div className="bg-primary-dark px-7 sm:px-9 py-6">
         {item.results && (
-          <div className="mb-5 grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-3">
+          <div className="mt-5 grid grid-cols-2 gap-x-4 gap-y-4 rounded-xl bg-surface border border-border p-5 sm:grid-cols-3">
             {item.results.map((r) => (
               <div key={r.label}>
-                <p className="text-xl sm:text-2xl font-extrabold text-white">
+                <p className="text-xl sm:text-2xl font-extrabold text-primary">
                   {r.value}
                 </p>
-                <p className="mt-0.5 text-[11px] leading-snug text-white/60">
+                <p className="mt-0.5 text-[11px] leading-snug text-foreground/60">
                   {r.label}
                 </p>
               </div>
             ))}
           </div>
         )}
+
+        <FlowDiagram stages={item.diagramStages} branch={item.diagramBranch} />
+
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          className="mt-6 flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary-dark transition-colors cursor-pointer"
+          aria-expanded={open}
+        >
+          {open ? hideDetailsLabel : detailsLabel}
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            className={`transition-transform ${open ? "rotate-180" : ""}`}
+          >
+            <path
+              d="M6 9l6 6 6-6"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+
+        {open && (
+          <>
+            <div className="mt-5 grid gap-6 sm:grid-cols-2">
+              <div>
+                <h4 className="text-xs font-bold text-foreground/50 uppercase tracking-wide mb-2">
+                  {modulesLabel}
+                </h4>
+                <ul className="space-y-1.5">
+                  {item.modules.map((m) => (
+                    <li
+                      key={m}
+                      className="flex items-start gap-2 text-sm text-foreground/75"
+                    >
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                      {m}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-xs font-bold text-foreground/50 uppercase tracking-wide mb-2">
+                  {integrationLabel}
+                </h4>
+                <p className="text-sm text-foreground/75 leading-relaxed">
+                  {item.integration}
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-1.5">
+              {item.tech.map((tech) => (
+                <span
+                  key={tech}
+                  className="rounded-full bg-surface border border-border text-xs font-medium text-foreground/70 px-2.5 py-1"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+
+      <div className="bg-primary-dark px-7 sm:px-9 py-6">
         <ul className="space-y-2.5">
           {item.highlights.map((h) => (
             <li key={h} className="flex items-start gap-2.5 text-sm text-white/90">
@@ -195,6 +231,8 @@ export function CaseStudies() {
             item={item}
             modulesLabel={t.caseStudies.modulesLabel}
             integrationLabel={t.caseStudies.integrationLabel}
+            detailsLabel={t.caseStudies.detailsLabel}
+            hideDetailsLabel={t.caseStudies.hideDetailsLabel}
           />
         ))}
       </div>
