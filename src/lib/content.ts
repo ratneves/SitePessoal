@@ -257,9 +257,9 @@ export const content: Record<Locale, Content> = {
           icon: "university",
           featured: true,
           details: [
-            "Sistemas Operativos",
-            "Modelação de Sistemas de Informação",
-            "Sistemas de Gestão de Bases de Dados",
+            "Sistemas Operativos — arquitetura, gestão de processos, memória, sistemas de ficheiros, concorrência, papel do kernel e chamadas de sistema.",
+            "Modelação de Sistemas de Informação — análise de requisitos, desenho conceptual e estrutural com UML, fluxos de processos e regras de negócio.",
+            "Sistemas de Gestão de Bases de Dados — modelo relacional, normalização, SQL, transações, integridade referencial, controlo de acessos e princípios ACID.",
           ],
         },
         {
@@ -794,9 +794,9 @@ export const content: Record<Locale, Content> = {
           icon: "university",
           featured: true,
           details: [
-            "Operating Systems",
-            "Information Systems Modeling",
-            "Database Management Systems",
+            "Operating Systems — architecture, process and memory management, file systems, concurrency, the kernel's role and system calls.",
+            "Information Systems Modeling — requirements analysis, conceptual and structural design with UML, process flows and business rules.",
+            "Database Management Systems — relational model, normalization, SQL, transactions, referential integrity, access control and ACID principles.",
           ],
         },
         {
