@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
 
 const COUNTER_URL = "https://abacus.jasoncameron.dev";
-const COUNTER_PATH = "raneves.pt/visitas";
+const COUNTER_PATH = "raneves.me/visitas";
 
 function useVisitCount() {
   const [count, setCount] = useState<number | null>(null);
