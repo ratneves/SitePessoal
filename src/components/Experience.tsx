@@ -8,12 +8,10 @@ function TimelineCard({
   item,
   badge,
   projectsTitle,
-  initiativesTitle,
 }: {
   item: ExperienceItem;
   badge: string;
   projectsTitle: string;
-  initiativesTitle: string;
 }) {
   return (
     <div className="relative pl-10">
@@ -55,21 +53,6 @@ function TimelineCard({
             </ul>
           </div>
         )}
-        {item.initiatives && item.initiatives.length > 0 && (
-          <div className="mt-5 border-t border-border pt-4">
-            <h4 className="text-xs font-bold uppercase tracking-wide text-primary-dark">
-              {initiativesTitle}
-            </h4>
-            <ul className="mt-3 space-y-2">
-              {item.initiatives.map((initiative, i) => (
-                <li key={i} className="flex gap-2.5 text-sm text-foreground/75 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-sm bg-primary-dark/60 shrink-0" />
-                  {initiative}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
     </div>
   );
@@ -85,9 +68,7 @@ export function Experience() {
             key={item.role + item.period}
             item={item}
             badge={t.experience.deptHeadBadge}
-            projectsTitle={t.experience.projectsTitle}
-            initiativesTitle={t.experience.initiativesTitle}
-          />
+            projectsTitle={t.experience.projectsTitle}          />
         ))}
       </div>
 

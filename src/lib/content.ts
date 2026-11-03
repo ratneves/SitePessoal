@@ -12,7 +12,6 @@ export interface ExperienceItem {
   period: string;
   bullets: string[];
   projects?: string[];
-  initiatives?: string[];
   deptHead?: boolean;
 }
 
@@ -122,7 +121,6 @@ export interface Content {
     intro: string;
     deptHeadBadge: string;
     projectsTitle: string;
-    initiativesTitle: string;
     items: ExperienceItem[];
     additionalTitle: string;
     additional: ExperienceItem[];
@@ -308,7 +306,6 @@ export const content: Record<Locale, Content> = {
         "Progressão consistente desde analista programador até CTO/CIO, com responsabilidade direta de direção de departamento em várias das organizações.",
       deptHeadBadge: "Direção de Departamento",
       projectsTitle: "Projetos relevantes",
-      initiativesTitle: "Iniciativas estratégicas",
       items: [
         {
           role: "CTO / CIO / DPO & Board Member",
@@ -323,18 +320,16 @@ export const content: Record<Locale, Content> = {
             "Promovo a cibersegurança, a gestão de acessos e a sensibilização interna para a proteção de dados e boas práticas de segurança.",
           ],
           projects: [
-            "Website, motor de reservas e apps: gestão da plataforma de reservas e pagamentos online, com monitorização contínua, backups testados e ambientes de teste separados da produção.",
-            "Integração entre os sistemas de reservas, operações e frota, com informação de tours e transportes atualizada e consistente, e simplificação do fluxo de comunicação entre reservas e operação.",
-            "Automatização de relatórios operacionais antes compilados manualmente, eliminando erros de transcrição e reduzindo o tempo semanal dedicado.",
-            "Monitorização com alertas automáticos para detetar e corrigir problemas antes de afetarem os clientes, reduzindo o tempo de resposta a incidentes.",
-          ],
-          initiatives: [
             "Frota zero emissões: dar continuidade à transição iniciada com os Tuk Tuks 100% elétricos, expandindo gradualmente os transfers (Living Transfers) e os miniautocarros de turismo para viaturas elétricas ou híbridas plug-in e reduzindo a pegada de carbono nas rotas mais procuradas, como o Douro e o Minho.",
             "Turismo regenerativo: roteiros de impacto positivo em que o turista contribui para o destino, com apoio a comunidades locais, artesanato tradicional e conservação ambiental, integrados nas causas da \"Living is Giving\".",
             "Sistema integrado de operações (ERP à medida): nova camada operacional, com parceiros tecnológicos, que centraliza guias, viaturas e bilhética de todas as marcas do grupo (LivingDMC, Living Private Tours, Living Events) numa única plataforma em tempo real, para responder com agilidade a picos de procura e imprevistos.",
             "App \"Smart Companion\" para viajantes: alertas em tempo real sobre pick-ups, conteúdos em Realidade Aumentada sobre os monumentos visitados e recomendações personalizadas de outras atividades do grupo.",
             "Living Cruise, Rio Douro: evolução das festas em barco no Porto para experiências fluviais premium em nichos, como provas cegas de vinhos com enólogos locais e eventos corporativos exclusivos da Living Events.",
             "Hiper-personalização no outgoing (Living Travel): Inteligência Artificial no planeamento de viagens de portugueses ao estrangeiro, sugerindo roteiros originais com base no perfil e nas preferências do cliente, para diferenciar a Living Travel das agências tradicionais.",
+            "Website, motor de reservas e apps: gestão da plataforma de reservas e pagamentos online, com monitorização contínua, backups testados e ambientes de teste separados da produção.",
+            "Integração entre os sistemas de reservas, operações e frota, com informação de tours e transportes atualizada e consistente, e simplificação do fluxo de comunicação entre reservas e operação.",
+            "Automatização de relatórios operacionais antes compilados manualmente, eliminando erros de transcrição e reduzindo o tempo semanal dedicado.",
+            "Monitorização com alertas automáticos para detetar e corrigir problemas antes de afetarem os clientes, reduzindo o tempo de resposta a incidentes.",
           ],
         },
         {
@@ -898,7 +893,6 @@ export const content: Record<Locale, Content> = {
         "Consistent progression from programmer analyst to CTO/CIO, with direct department-head responsibility in several organizations.",
       deptHeadBadge: "Department Head",
       projectsTitle: "Key projects",
-      initiativesTitle: "Strategic initiatives",
       items: [
         {
           role: "CTO / CIO / DPO & Board Member",
@@ -913,18 +907,16 @@ export const content: Record<Locale, Content> = {
             "I drive cybersecurity, access management and internal awareness of data protection and security best practices.",
           ],
           projects: [
-            "Website, booking engine and apps: management of the online booking and payments platform, with continuous monitoring, regularly tested backups and test environments separated from production.",
-            "Integration between booking, operations and fleet systems, keeping tour and transport information up to date and consistent, and simplifying the communication flow between bookings and operations.",
-            "Automation of operational reports previously compiled by hand, eliminating transcription errors and cutting the weekly time spent on them.",
-            "Monitoring with automatic alerts to detect and fix problems before they reach customers, reducing incident response time.",
-          ],
-          initiatives: [
             "Zero-emission fleet: continuing the transition started with the 100% electric Tuk Tuks, gradually expanding transfers (Living Transfers) and tourist minibuses to electric or plug-in hybrid vehicles and cutting the carbon footprint on the most popular routes, such as the Douro and Minho.",
             "Regenerative tourism: positive-impact itineraries where tourists help improve the destination, supporting local communities, traditional crafts and environmental conservation, aligned with the causes of \"Living is Giving\".",
             "Integrated operations system (custom ERP): a new operational layer, built with technology partners, centralizing guides, vehicles and ticketing for all of the group's brands (LivingDMC, Living Private Tours, Living Events) in a single real-time platform, for agile response to demand peaks and unexpected events.",
             "\"Smart Companion\" app for travelers: real-time pick-up alerts, Augmented Reality content about the monuments visited and personalized recommendations for the group's other activities.",
             "Living Cruise, Douro River: evolving the boat parties in Porto into premium niche river experiences, such as blind wine tastings with local winemakers and exclusive corporate events by Living Events.",
             "Hyper-personalization in outgoing travel (Living Travel): Artificial Intelligence in planning trips abroad for Portuguese travelers, suggesting original itineraries based on each customer's profile and preferences, to set Living Travel apart from traditional agencies.",
+            "Website, booking engine and apps: management of the online booking and payments platform, with continuous monitoring, regularly tested backups and test environments separated from production.",
+            "Integration between booking, operations and fleet systems, keeping tour and transport information up to date and consistent, and simplifying the communication flow between bookings and operations.",
+            "Automation of operational reports previously compiled by hand, eliminating transcription errors and cutting the weekly time spent on them.",
+            "Monitoring with automatic alerts to detect and fix problems before they reach customers, reducing incident response time.",
           ],
         },
         {
