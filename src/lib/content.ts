@@ -11,6 +11,7 @@ export interface ExperienceItem {
   location?: string;
   period: string;
   bullets: string[];
+  projects?: string[];
   deptHead?: boolean;
 }
 
@@ -119,6 +120,7 @@ export interface Content {
     title: string;
     intro: string;
     deptHeadBadge: string;
+    projectsTitle: string;
     items: ExperienceItem[];
     additionalTitle: string;
     additional: ExperienceItem[];
@@ -303,23 +305,30 @@ export const content: Record<Locale, Content> = {
       intro:
         "Progressão consistente desde analista programador até CTO/CIO, com responsabilidade direta de direção de departamento em várias das organizações.",
       deptHeadBadge: "Direção de Departamento",
+      projectsTitle: "Projetos relevantes",
       items: [
         {
           role: "CTO / CIO / DPO & Board Member",
-          company: "Grupo Livingtours",
+          company: "Grupo Livingtours (turismo)",
           period: "2023 – Atual",
           deptHead: true,
           bullets: [
             "Como membro do Conselho de Administração, participo nas decisões estratégicas do grupo, traduzindo tecnologia e dados em prioridades de negócio, investimento e gestão de risco.",
             "Como CTO/CIO, defino e executo a estratégia tecnológica: arquitetura de sistemas, infraestrutura, aplicações e roadmap de transformação digital, com responsabilidade por orçamento e fornecedores de TI.",
-            "Lidero as operações e a equipa de tecnologia, assegurando disponibilidade, continuidade de negócio e níveis de serviço dos sistemas críticos.",
+            "Lidero as operações e uma equipa de 6 colaboradores, assegurando disponibilidade, continuidade de negócio e níveis de serviço dos sistemas críticos.",
             "Como DPO (Encarregado de Proteção de Dados), monitorizo a conformidade com o RGPD, aconselho a administração, conduzo avaliações de impacto, mantenho o registo das atividades de tratamento e sou o ponto de contacto com a CNPD e com os titulares dos dados.",
             "Promovo a cibersegurança, a gestão de acessos e a sensibilização interna para a proteção de dados e boas práticas de segurança.",
+          ],
+          projects: [
+            "Website, motor de reservas e apps: gestão da plataforma de reservas e pagamentos online, com monitorização contínua, backups testados e ambientes de teste separados da produção.",
+            "Integração entre os sistemas de reservas, operações e frota, com informação de tours e transportes atualizada e consistente, e simplificação do fluxo de comunicação entre reservas e operação.",
+            "Automatização de relatórios operacionais antes compilados manualmente, eliminando erros de transcrição e reduzindo o tempo semanal dedicado.",
+            "Monitorização com alertas automáticos para detetar e corrigir problemas antes de afetarem os clientes, reduzindo o tempo de resposta a incidentes.",
           ],
         },
         {
           role: "Consultor em Arquitetura de Soluções",
-          company: "Hôma DsStore",
+          company: "Hôma DsStore (retalho)",
           period: "Fev – Mai 2025",
           bullets: [
             "Analisei os requisitos de negócio e traduzi-os numa arquitetura de solução: componentes, integrações, fluxos de dados e requisitos não funcionais (desempenho, segurança, escalabilidade).",
@@ -870,23 +879,30 @@ export const content: Record<Locale, Content> = {
       intro:
         "Consistent progression from programmer analyst to CTO/CIO, with direct department-head responsibility in several organizations.",
       deptHeadBadge: "Department Head",
+      projectsTitle: "Key projects",
       items: [
         {
           role: "CTO / CIO / DPO & Board Member",
-          company: "Grupo Livingtours",
+          company: "Grupo Livingtours (tourism)",
           period: "2023 – Present",
           deptHead: true,
           bullets: [
             "As a Board member, I take part in the group's strategic decisions, translating technology and data into business priorities, investment and risk management.",
             "As CTO/CIO, I define and execute technology strategy: systems architecture, infrastructure, applications and digital transformation roadmap, with responsibility for IT budget and vendors.",
-            "I lead technology operations and the team, ensuring availability, business continuity and service levels for critical systems.",
+            "I lead technology operations and a team of 6, ensuring availability, business continuity and service levels for critical systems.",
             "As DPO (Data Protection Officer), I monitor GDPR compliance, advise the board, run impact assessments, maintain the record of processing activities and act as the point of contact for the data protection authority (CNPD) and data subjects.",
             "I drive cybersecurity, access management and internal awareness of data protection and security best practices.",
+          ],
+          projects: [
+            "Website, booking engine and apps: management of the online booking and payments platform, with continuous monitoring, regularly tested backups and test environments separated from production.",
+            "Integration between booking, operations and fleet systems, keeping tour and transport information up to date and consistent, and simplifying the communication flow between bookings and operations.",
+            "Automation of operational reports previously compiled by hand, eliminating transcription errors and cutting the weekly time spent on them.",
+            "Monitoring with automatic alerts to detect and fix problems before they reach customers, reducing incident response time.",
           ],
         },
         {
           role: "Solutions Architecture Consultant",
-          company: "Hôma DsStore",
+          company: "Hôma DsStore (retail)",
           period: "Feb – May 2025",
           bullets: [
             "Analyzed business requirements and translated them into a solution architecture: components, integrations, data flows and non-functional requirements (performance, security, scalability).",

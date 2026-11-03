@@ -4,7 +4,15 @@ import { useLanguage } from "@/lib/LanguageContext";
 import { Section } from "./Section";
 import type { ExperienceItem } from "@/lib/content";
 
-function TimelineCard({ item, badge }: { item: ExperienceItem; badge: string }) {
+function TimelineCard({
+  item,
+  badge,
+  projectsTitle,
+}: {
+  item: ExperienceItem;
+  badge: string;
+  projectsTitle: string;
+}) {
   return (
     <div className="relative pl-10">
       <span className="absolute left-0 top-1.5 h-4 w-4 rounded-full bg-primary ring-4 ring-primary/15" />
@@ -30,6 +38,21 @@ function TimelineCard({ item, badge }: { item: ExperienceItem; badge: string }) 
             </li>
           ))}
         </ul>
+        {item.projects && item.projects.length > 0 && (
+          <div className="mt-5 border-t border-border pt-4">
+            <h4 className="text-xs font-bold uppercase tracking-wide text-primary-dark">
+              {projectsTitle}
+            </h4>
+            <ul className="mt-3 space-y-2">
+              {item.projects.map((project, i) => (
+                <li key={i} className="flex gap-2.5 text-sm text-foreground/75 leading-relaxed">
+                  <span className="mt-2 h-1.5 w-1.5 rounded-sm bg-primary-dark/60 shrink-0" />
+                  {project}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -45,6 +68,7 @@ export function Experience() {
             key={item.role + item.period}
             item={item}
             badge={t.experience.deptHeadBadge}
+            projectsTitle={t.experience.projectsTitle}
           />
         ))}
       </div>
