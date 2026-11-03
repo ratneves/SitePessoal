@@ -181,6 +181,7 @@ export interface Content {
   };
   footer: {
     rights: string;
+    visits: string;
   };
 }
 
@@ -727,6 +728,7 @@ export const content: Record<Locale, Content> = {
     },
     footer: {
       rights: "Todos os direitos reservados.",
+      visits: "Visitas",
     },
   },
   en: {
@@ -1264,6 +1266,7 @@ export const content: Record<Locale, Content> = {
     },
     footer: {
       rights: "All rights reserved.",
+      visits: "Visits",
     },
   },
 };
