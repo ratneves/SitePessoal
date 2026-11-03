@@ -325,6 +325,7 @@ export const content: Record<Locale, Content> = {
           company: "Elastron Portugal, S.A.",
           location: "Paços de Ferreira",
           period: "2017 – 2019",
+          deptHead: true,
           bullets: [
             "Defini, em conjunto com a administração, a estratégia de desenvolvimento de software e as necessidades tecnológicas da empresa.",
             "Geri uma equipa de TI de 4 elementos e as infraestruturas de sistemas e rede, assegurando 98% de disponibilidade dos sistemas.",
@@ -866,6 +867,7 @@ export const content: Record<Locale, Content> = {
           company: "Elastron Portugal, S.A.",
           location: "Paços de Ferreira",
           period: "2017 – 2019",
+          deptHead: true,
           bullets: [
             "Defined, together with management, the software development strategy and technology needs of the company.",
             "Managed a 4-person IT team and the systems/network infrastructure, ensuring 98% system uptime.",
