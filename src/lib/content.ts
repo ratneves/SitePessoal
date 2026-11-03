@@ -8,7 +8,7 @@ export interface StatItem {
 export interface ExperienceItem {
   role: string;
   company: string;
-  location: string;
+  location?: string;
   period: string;
   bullets: string[];
   deptHead?: boolean;
@@ -223,7 +223,7 @@ export const content: Record<Locale, Content> = {
     stats: [
       { value: "38", label: "anos de carreira" },
       { value: "40", label: "anos como formador" },
-      { value: "6", label: "departamentos liderados" },
+      { value: "7", label: "departamentos liderados" },
       { value: "5", label: "países com projetos entregues" },
     ],
     about: {
@@ -231,7 +231,7 @@ export const content: Record<Locale, Content> = {
       paragraphs: [
         "Sou um executivo de tecnologia com uma carreira de 38 anos, construída sobre dois pilares que se reforçam mutuamente: a liderança de departamentos e a docência. Comecei a dar formação em 1986, ainda antes de iniciar funções como analista programador, e desde então nunca deixei de combinar a responsabilidade de gerir equipas e sistemas com a de formar e desenvolver pessoas — primeiro como responsável de setor, depois como diretor de departamento em várias organizações, e desde 2023 também como tutor universitário.",
         "Ao longo do percurso, dirigi departamentos de informática e tecnologia em setores como saúde, têxtil e indústria automóvel, sempre com responsabilidade direta por equipas, orçamentos e resultados. Em paralelo, mantive uma atividade constante de formação — mais de três décadas a preparar profissionais em áreas como sistemas de informação, bases de dados e ferramentas de produtividade.",
-        "Atualmente concilio a função de CTO/CIO do Grupo Filinto Mota, onde reporto diretamente ao CEO, com a tutoria na Universidade Aberta, onde leciono Sistemas Operativos, Modelação de Sistemas de Informação e Sistemas de Gestão de Bases de Dados. Estou também a concluir o Doutoramento em Ciência e Tecnologia Web na UTAD.",
+        "Atualmente concilio as funções de CTO/CIO do Grupo Filinto Mota, onde reporto diretamente ao CEO, e de CTO/CIO/DPO e Board Member do Grupo Livingtours, com a tutoria na Universidade Aberta, onde leciono Sistemas Operativos, Modelação de Sistemas de Informação e Sistemas de Gestão de Bases de Dados. Estou também a concluir o Doutoramento em Ciência e Tecnologia Web na UTAD.",
       ],
     },
     leadership: {
@@ -305,6 +305,19 @@ export const content: Record<Locale, Content> = {
       deptHeadBadge: "Direção de Departamento",
       items: [
         {
+          role: "CTO / CIO / DPO & Board Member",
+          company: "Grupo Livingtours",
+          period: "2023 – Atual",
+          deptHead: true,
+          bullets: [
+            "Como membro do Conselho de Administração, participo nas decisões estratégicas do grupo, traduzindo tecnologia e dados em prioridades de negócio, investimento e gestão de risco.",
+            "Como CTO/CIO, defino e executo a estratégia tecnológica: arquitetura de sistemas, infraestrutura, aplicações e roadmap de transformação digital, com responsabilidade por orçamento e fornecedores de TI.",
+            "Lidero as operações e a equipa de tecnologia, assegurando disponibilidade, continuidade de negócio e níveis de serviço dos sistemas críticos.",
+            "Como DPO (Encarregado de Proteção de Dados), monitorizo a conformidade com o RGPD, aconselho a administração, conduzo avaliações de impacto, mantenho o registo das atividades de tratamento e sou o ponto de contacto com a CNPD e com os titulares dos dados.",
+            "Promovo a cibersegurança, a gestão de acessos e a sensibilização interna para a proteção de dados e boas práticas de segurança.",
+          ],
+        },
+        {
           role: "CTO / CIO / IT Manager",
           company: "Grupo Filinto Mota",
           location: "Porto",
@@ -318,6 +331,18 @@ export const content: Record<Locale, Content> = {
             "Introduzi práticas DevOps e pipelines CI/CD, modernizando a infraestrutura com cloud híbrida, containers e monitorização (Grafana/ELK).",
             "Estruturei o data warehouse do grupo e implementei dashboards em Power BI, reduzindo o tempo de elaboração de relatórios em 60%.",
             "Geri e desenvolvi uma equipa de 4 profissionais, elevando o índice de satisfação interna em 30%, e liderei projetos de otimização que geraram poupanças anuais superiores a 150 mil euros.",
+          ],
+        },
+        {
+          role: "Consultor em Arquitetura de Soluções",
+          company: "Hôma DsStore",
+          period: "Fev – Mai 2025",
+          bullets: [
+            "Analisei os requisitos de negócio e traduzi-os numa arquitetura de solução: componentes, integrações, fluxos de dados e requisitos não funcionais (desempenho, segurança, escalabilidade).",
+            "Defini as opções tecnológicas e documentei as decisões de arquitetura, avaliando alternativas, custos e riscos.",
+            "Desenhei a integração entre sistemas e plataformas (APIs, mensagens, ETL), garantindo coerência com a arquitetura existente.",
+            "Acompanhei as equipas de desenvolvimento na implementação, validando o cumprimento da arquitetura definida e apoiando a resolução de problemas técnicos.",
+            "Aconselhei a gestão sobre o roadmap técnico, a dívida técnica e boas práticas de segurança, qualidade e DevOps.",
           ],
         },
         {
@@ -765,7 +790,7 @@ export const content: Record<Locale, Content> = {
     stats: [
       { value: "38", label: "years of career" },
       { value: "40", label: "years as trainer" },
-      { value: "6", label: "departments led" },
+      { value: "7", label: "departments led" },
       { value: "5", label: "countries with delivered projects" },
     ],
     about: {
@@ -773,7 +798,7 @@ export const content: Record<Locale, Content> = {
       paragraphs: [
         "I am a technology executive with a 38-year career built on two mutually reinforcing pillars: department leadership and teaching. I started training in 1986, even before beginning my career as a programmer analyst, and have never stopped combining responsibility for managing teams and systems with training and developing people — first as a section lead, then as department head in several organizations, and since 2023 also as a university tutor.",
         "Throughout my career I have run IT and technology departments in sectors such as healthcare, textiles and automotive, always with direct responsibility for teams, budgets and results. In parallel, I have kept up a constant training activity — more than three decades preparing professionals in areas such as information systems, databases and productivity tools.",
-        "I currently combine the role of CTO/CIO at Grupo Filinto Mota, reporting directly to the CEO, with tutoring at Universidade Aberta, where I teach Operating Systems, Information Systems Modeling and Database Management Systems. I am also completing a PhD in Web Science and Technology at UTAD.",
+        "I currently combine the roles of CTO/CIO at Grupo Filinto Mota, reporting directly to the CEO, and CTO/CIO/DPO and Board Member at Grupo Livingtours, with tutoring at Universidade Aberta, where I teach Operating Systems, Information Systems Modeling and Database Management Systems. I am also completing a PhD in Web Science and Technology at UTAD.",
       ],
     },
     leadership: {
@@ -847,6 +872,19 @@ export const content: Record<Locale, Content> = {
       deptHeadBadge: "Department Head",
       items: [
         {
+          role: "CTO / CIO / DPO & Board Member",
+          company: "Grupo Livingtours",
+          period: "2023 – Present",
+          deptHead: true,
+          bullets: [
+            "As a Board member, I take part in the group's strategic decisions, translating technology and data into business priorities, investment and risk management.",
+            "As CTO/CIO, I define and execute technology strategy: systems architecture, infrastructure, applications and digital transformation roadmap, with responsibility for IT budget and vendors.",
+            "I lead technology operations and the team, ensuring availability, business continuity and service levels for critical systems.",
+            "As DPO (Data Protection Officer), I monitor GDPR compliance, advise the board, run impact assessments, maintain the record of processing activities and act as the point of contact for the data protection authority (CNPD) and data subjects.",
+            "I drive cybersecurity, access management and internal awareness of data protection and security best practices.",
+          ],
+        },
+        {
           role: "CTO / CIO / IT Manager",
           company: "Grupo Filinto Mota",
           location: "Porto",
@@ -860,6 +898,18 @@ export const content: Record<Locale, Content> = {
             "Introduced DevOps practices and CI/CD pipelines, modernizing infrastructure with hybrid cloud, containers and monitoring (Grafana/ELK).",
             "Structured the group's data warehouse and implemented Power BI dashboards, cutting reporting time by 60%.",
             "Managed and developed a team of 4 professionals, raising internal satisfaction by 30%, and led optimization projects generating annual savings above €150,000.",
+          ],
+        },
+        {
+          role: "Solutions Architecture Consultant",
+          company: "Hôma DsStore",
+          period: "Feb – May 2025",
+          bullets: [
+            "Analyzed business requirements and translated them into a solution architecture: components, integrations, data flows and non-functional requirements (performance, security, scalability).",
+            "Defined technology options and documented architecture decisions, weighing alternatives, costs and risks.",
+            "Designed the integration between systems and platforms (APIs, messaging, ETL), keeping it consistent with the existing architecture.",
+            "Supported development teams during implementation, validating compliance with the defined architecture and helping resolve technical issues.",
+            "Advised management on the technical roadmap, technical debt and security, quality and DevOps best practices.",
           ],
         },
         {

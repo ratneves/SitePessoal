@@ -19,7 +19,7 @@ function TimelineCard({ item, badge }: { item: ExperienceItem; badge: string }) 
           )}
         </div>
         <p className="mt-1 text-sm font-medium text-foreground/70">
-          {item.company} — {item.location}
+          {item.location ? `${item.company} — ${item.location}` : item.company}
         </p>
         <p className="text-sm text-primary font-semibold">{item.period}</p>
         <ul className="mt-4 space-y-2">
@@ -70,7 +70,7 @@ export function Experience() {
                 )}
               </div>
               <p className="mt-1 text-xs font-medium text-foreground/60">
-                {item.company} — {item.location}
+                {item.location ? `${item.company} — ${item.location}` : item.company}
               </p>
               <p className="text-xs text-primary font-semibold">{item.period}</p>
               <p className="mt-3 text-xs text-foreground/70 leading-relaxed">
