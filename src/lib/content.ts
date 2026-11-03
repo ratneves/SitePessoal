@@ -337,6 +337,13 @@ export const content: Record<Locale, Content> = {
             "Acompanhei as equipas de desenvolvimento na implementação, validando o cumprimento da arquitetura definida e apoiando a resolução de problemas técnicos.",
             "Aconselhei a gestão sobre o roadmap técnico, a dívida técnica e boas práticas de segurança, qualidade e DevOps.",
           ],
+          projects: [
+            "Estratégia omnicanal e Realidade Aumentada: AR na app e no website para projetar móveis e artigos de decoração em casa do cliente antes da compra; Click & Collect reforçado e Ship-from-Store, usando as grandes superfícies como micro-hubs logísticos para reduzir custos e prazos de entrega do e-commerce.",
+            "Inventário com RFID: etiquetas RFID para rastreabilidade em tempo real, com precisão de inventário superior a 98%, contagens de stock mais rápidas e prevenção de ruturas em campanhas sazonais; ferramentas móveis para localizar artigos e identificar necessidades de reposição.",
+            "Fidelização inteligente e CRM: evolução do programa de fidelização para uma app gamificada, com Inteligência Artificial sobre o histórico de compras e o estilo de decoração de cada cliente para ofertas personalizadas, e recomendação preditiva de looks completos (cross-selling).",
+            "Sustentabilidade e economia circular (ESG): expansão de linhas sustentáveis (plástico reciclado, madeira FSC, algodão orgânico) e programa de logística inversa para retoma de têxteis-lar e pequenos utilitários em troca de pontos.",
+            "Smart Stores: self-checkout e Scan & Go por smartphone para eliminar filas nos picos de fim de semana e promoções; etiquetas eletrónicas de prateleira (ESL) para preços centralizados e ecrãs digitais com conteúdo inspiracional de decoração.",
+          ],
         },
         {
           role: "CTO / CIO / IT Manager",
@@ -910,6 +917,13 @@ export const content: Record<Locale, Content> = {
             "Designed the integration between systems and platforms (APIs, messaging, ETL), keeping it consistent with the existing architecture.",
             "Supported development teams during implementation, validating compliance with the defined architecture and helping resolve technical issues.",
             "Advised management on the technical roadmap, technical debt and security, quality and DevOps best practices.",
+          ],
+          projects: [
+            "Omnichannel strategy and Augmented Reality: AR in the app and website to project furniture and home decor in the customer's own home before purchase; reinforced Click & Collect and Ship-from-Store, using the large stores as logistics micro-hubs to cut e-commerce delivery costs and lead times.",
+            "RFID inventory: RFID tags for real-time traceability, with inventory accuracy above 98%, faster stock counts and prevention of stock-outs in seasonal campaigns; mobile tools to locate items and identify replenishment needs.",
+            "Smart loyalty and CRM: evolving the loyalty program into a gamified app, with Artificial Intelligence over each customer's purchase history and decor style for personalized offers, and predictive recommendation of complete looks (cross-selling).",
+            "Sustainability and circular economy (ESG): expansion of sustainable lines (recycled plastic, FSC wood, organic cotton) and a reverse-logistics program taking back old home textiles and small utilities in exchange for points.",
+            "Smart Stores: self-checkout and smartphone Scan & Go to remove queues at weekend and promotional peaks; electronic shelf labels (ESL) for centralized pricing and digital screens with inspirational decor content.",
           ],
         },
         {
